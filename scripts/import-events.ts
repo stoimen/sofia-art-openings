@@ -11,6 +11,12 @@ type SourceImporter = {
   run: () => Promise<ArtEvent[]>;
 };
 
+type ParsedDateRange = {
+  start?: string;
+  end?: string;
+  matchedText?: string;
+};
+
 const directoryName = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(directoryName, '..');
 const eventsPath = path.join(projectRoot, 'public', 'data', 'events.json');
@@ -36,6 +42,17 @@ function toIsoDate(year: string, month: string, day: string) {
 
 function replaceEuropeanDates(value: string) {
   return value.replace(/\b(\d{1,2})\.(\d{1,2})\.(\d{4})\b/g, (_, day, month, year) => toIsoDate(year, month, day));
+}
+
+function stripOrdinals(value: string) {
+  return value.replace(/\b(\d{1,2})(st|nd|rd|th)\b/gi, '$1');
+}
+
+function normalizeDateText(value: string) {
+  return stripOrdinals(value)
+    .replace(/[–—]/g, '-')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function normalizeDateTime(value?: string) {
@@ -68,6 +85,192 @@ function normalizeDate(value?: string) {
 
   const parsed = new Date(normalizedText);
   return Number.isNaN(parsed.getTime()) ? undefined : parsed.toISOString().slice(0, 10);
+}
+
+function monthNumberFromName(value: string) {
+  const monthMap: Record<string, string> = {
+    january: '01',
+    february: '02',
+    march: '03',
+    april: '04',
+    may: '05',
+    june: '06',
+    july: '07',
+    august: '08',
+    september: '09',
+    october: '10',
+    november: '11',
+    december: '12',
+    януари: '01',
+    февруари: '02',
+    март: '03',
+    април: '04',
+    май: '05',
+    юни: '06',
+    юли: '07',
+    август: '08',
+    септември: '09',
+    октомври: '10',
+    ноември: '11',
+    декември: '12',
+  };
+
+  return monthMap[value.toLowerCase()];
+}
+
+function createIsoDate(year: string, monthName: string, day: string) {
+  const month = monthNumberFromName(monthName);
+  return month ? toIsoDate(year, month, day) : undefined;
+}
+
+function extractDateRange(value?: string): ParsedDateRange {
+  const text = normalizeText(value);
+  if (!text) {
+    return {};
+  }
+
+  const normalized = normalizeDateText(text);
+  const monthPattern =
+    '(January|February|March|April|May|June|July|August|September|October|November|December|януари|февруари|март|април|май|юни|юли|август|септември|октомври|ноември|декември)';
+
+  let match =
+    normalized.match(/\b(\d{1,2})\.(\d{1,2})\.?\s*-\s*(\d{1,2})\.(\d{1,2})\.(\d{4})\b/) ??
+    normalized.match(/\b(\d{1,2})\s*-\s*(\d{1,2})\.(\d{1,2})\.(\d{4})\b/);
+
+  if (match) {
+    if (match[2].includes('.')) {
+      return {};
+    }
+
+    if (match[0].includes('.')) {
+      if (match.length === 6) {
+        return {
+          start: toIsoDate(match[5], match[2], match[1]),
+          end: toIsoDate(match[5], match[4], match[3]),
+          matchedText: match[0],
+        };
+      }
+
+      return {
+        start: toIsoDate(match[4], match[3], match[1]),
+        end: toIsoDate(match[4], match[3], match[2]),
+        matchedText: match[0],
+      };
+    }
+  }
+
+  match = normalized.match(
+    new RegExp(`(\\d{1,2})\\s+${monthPattern}\\s+(\\d{4})\\s*-\\s*(\\d{1,2})\\s+${monthPattern}\\s+(\\d{4})`, 'i'),
+  );
+  if (match) {
+    return {
+      start: createIsoDate(match[3], match[2], match[1]),
+      end: createIsoDate(match[6], match[5], match[4]),
+      matchedText: match[0],
+    };
+  }
+
+  match = normalized.match(new RegExp(`${monthPattern}\\s+(\\d{1,2})\\s*-\\s*${monthPattern}\\s+(\\d{1,2}),\\s*(\\d{4})`, 'i'));
+  if (match) {
+    return {
+      start: createIsoDate(match[5], match[1], match[2]),
+      end: createIsoDate(match[5], match[3], match[4]),
+      matchedText: match[0],
+    };
+  }
+
+  match = normalized.match(new RegExp(`${monthPattern}\\s+(\\d{1,2})\\s*-\\s*(\\d{1,2}),\\s*(\\d{4})`, 'i'));
+  if (match) {
+    return {
+      start: createIsoDate(match[4], match[1], match[2]),
+      end: createIsoDate(match[4], match[1], match[3]),
+      matchedText: match[0],
+    };
+  }
+
+  match = normalized.match(new RegExp(`(\\d{1,2})\\s*-\\s*(\\d{1,2})\\s+${monthPattern}\\s+(\\d{4})`, 'i'));
+  if (match) {
+    return {
+      start: createIsoDate(match[4], match[3], match[1]),
+      end: createIsoDate(match[4], match[3], match[2]),
+      matchedText: match[0],
+    };
+  }
+
+  match = normalized.match(new RegExp(`(\\d{1,2})\\s+${monthPattern}\\s*-\\s*(\\d{1,2})\\s+${monthPattern}\\s+(\\d{4})`, 'i'));
+  if (match) {
+    return {
+      start: createIsoDate(match[5], match[2], match[1]),
+      end: createIsoDate(match[5], match[4], match[3]),
+      matchedText: match[0],
+    };
+  }
+
+  return {};
+}
+
+function isCurrentOrUpcomingEvent(event: ArtEvent, now = new Date()) {
+  const dateCandidate = event.exhibitionEnd ?? event.exhibitionStart ?? event.openingStart?.slice(0, 10);
+  if (!dateCandidate) {
+    return false;
+  }
+
+  const today = new Date(now);
+  today.setHours(0, 0, 0, 0);
+  const boundary = today.toISOString().slice(0, 10);
+  return dateCandidate >= boundary;
+}
+
+function extractBackgroundImageUrl(styleValue?: string) {
+  const match = styleValue?.match(/url\((['"]?)(.+?)\1\)/);
+  return match ? match[2] : undefined;
+}
+
+function extractMapCenterCoordinates(url?: string) {
+  const match = url?.match(/[?&]center=([-0-9.]+),([-0-9.]+)/);
+  if (!match) {
+    return {};
+  }
+
+  return {
+    latitude: Number(match[1]),
+    longitude: Number(match[2]),
+  };
+}
+
+function extractArtistFromText(value?: string) {
+  const text = normalizeText(value);
+  if (!text) {
+    return undefined;
+  }
+
+  const byMatch = text.match(
+    /\b(?:solo exhibition by|an exhibition by|exhibition by|by)\s+(.+?)(?=\s+(?:Opening|Exhibition dates|Duration)\b|[.,|]|$)/i,
+  );
+  if (byMatch) {
+    return normalizeText(byMatch[1]);
+  }
+
+  return undefined;
+}
+
+function extractArtistFromTitle(value?: string) {
+  const title = normalizeText(value);
+  if (!title) {
+    return undefined;
+  }
+
+  const colonMatch = title.match(/:\s*(.+)$/);
+  if (colonMatch) {
+    return normalizeText(colonMatch[1]);
+  }
+
+  const dashParts = title.split(' – ').map((part) => normalizeText(part)).filter(Boolean);
+  if (dashParts.length === 2) {
+    return dashParts[1];
+  }
+
+  return undefined;
 }
 
 function inferEventType(...values: Array<string | undefined>) {
@@ -104,6 +307,7 @@ function buildId(source: EventSource, title: string, venue: string, date?: strin
 
 async function fetchHtml(url: string) {
   const response = await fetch(url, {
+    signal: AbortSignal.timeout(20_000),
     headers: {
       'user-agent': userAgent,
       'accept-language': 'en-US,en;q=0.8',
@@ -271,6 +475,34 @@ function dedupeEvents(events: ArtEvent[]) {
   });
 }
 
+function eventPayloadWithoutLastUpdated(event: ArtEvent) {
+  const { lastUpdated: _lastUpdated, ...payload } = event;
+  return payload;
+}
+
+function preserveLastUpdated(existingEvents: ArtEvent[], importedEvents: ArtEvent[], refreshedAt: string) {
+  const existingEventsById = new Map(existingEvents.map((event) => [event.id, event]));
+
+  return importedEvents.map((event) => {
+    const existingEvent = existingEventsById.get(event.id);
+    if (!existingEvent) {
+      return {
+        ...event,
+        lastUpdated: refreshedAt,
+      };
+    }
+
+    const hasChanged =
+      JSON.stringify(eventPayloadWithoutLastUpdated(existingEvent)) !==
+      JSON.stringify(eventPayloadWithoutLastUpdated(event));
+
+    return {
+      ...event,
+      lastUpdated: hasChanged ? refreshedAt : existingEvent.lastUpdated,
+    };
+  });
+}
+
 async function readExistingEvents() {
   try {
     const fileContents = await fs.readFile(eventsPath, 'utf8');
@@ -297,16 +529,280 @@ function createHeuristicImporter(source: EventSource, listUrl: string): SourceIm
   };
 }
 
+function createCredoBonumImporter(): SourceImporter {
+  const source = 'credobonum' as const;
+  const listUrl = 'https://credobonum.bg/en/exhibitions/';
+  const venue = 'Credo Bonum Gallery';
+  const address = '2 Slavyanska St., entrance from Benkovski St., 1000 Sofia, Bulgaria';
+
+  return {
+    source,
+    listUrl,
+    async run() {
+      const html = await fetchHtml(listUrl);
+      const $ = load(html);
+
+      return $('article.post')
+        .toArray()
+        .map<ArtEvent | undefined>((article) => {
+          const root = $(article);
+          const title = normalizeText(root.find('.post__title a').first().text());
+          const sourceUrl = normalizeText(root.find('.post__title a').first().attr('href'));
+          const dateLine = normalizeText(root.find('.sec-title').first().text());
+          const description = normalizeText(root.find('.excerpt').first().text());
+          const imageUrl = normalizeText(root.find('img').first().attr('src'));
+
+          if (!title || !sourceUrl) {
+            return undefined;
+          }
+
+          const range = extractDateRange([dateLine, description].filter(Boolean).join(' '));
+          const artist = extractArtistFromText(description) ?? extractArtistFromTitle(title);
+
+          return {
+            id: buildId(source, title, venue, range.start ?? dateLine),
+            title,
+            artist,
+            venue,
+            address,
+            exhibitionStart: range.start,
+            exhibitionEnd: range.end,
+            eventType: 'exhibition',
+            source,
+            sourceUrl,
+            description,
+            imageUrl,
+            tags: undefined,
+            lastUpdated: new Date().toISOString(),
+          };
+        })
+        .filter((event): event is ArtEvent => event !== undefined)
+        .filter((event) => isCurrentOrUpcomingEvent(event));
+    },
+  };
+}
+
+function createHostGalleryImporter(): SourceImporter {
+  const source = 'hostgallery' as const;
+  const listUrl = 'https://host.gallery/';
+  const venue = 'HOSTGALLERY';
+  const address = '102 Acad. Ivan Evstratiev Geshov Blvd., inner entrance, 1612 Sofia, Bulgaria';
+
+  return {
+    source,
+    listUrl,
+    async run() {
+      const html = await fetchHtml(listUrl);
+      const $ = load(html);
+      const artist = normalizeText($('h1.wp-block-heading').first().text());
+      const title = normalizeText($('h2.wp-block-heading').first().text());
+      const dateLine = normalizeText($('h3.wp-block-heading').first().text());
+      const openingLine = normalizeText(
+        $('p')
+          .toArray()
+          .map((element) => $(element).text())
+          .find((text) => text.includes('Opening and artist talk')),
+      );
+      const imageUrl = normalizeText($('meta[property="og:image"]').attr('content'));
+
+      if (!title) {
+        return [];
+      }
+
+      const range = extractDateRange(dateLine);
+      const openingStart = normalizeDateTime(
+        openingLine
+          ?.replace(/^Opening and artist talk:\s*/i, '')
+          .replace(/^Opening Reception:\s*/i, '')
+          .replace('|', ','),
+      );
+
+      const event: ArtEvent = {
+        id: buildId(source, title, venue, openingStart ?? range.start),
+        title,
+        artist,
+        venue,
+        address,
+        openingStart,
+        exhibitionStart: range.start,
+        exhibitionEnd: range.end,
+        eventType: 'exhibition',
+        source,
+        sourceUrl: listUrl,
+        description: openingLine,
+        imageUrl,
+        tags: undefined,
+        lastUpdated: new Date().toISOString(),
+      };
+
+      return isCurrentOrUpcomingEvent(event) ? [event] : [];
+    },
+  };
+}
+
+function createDechkoUzunovImporter(): SourceImporter {
+  const source = 'dechkouzunov' as const;
+  const listUrl = 'https://dug.sghg.bg/en/';
+  const address = '24 Dragan Tsankov Blvd., Izgrev, 1113 Sofia, Bulgaria';
+
+  return {
+    source,
+    listUrl,
+    async run() {
+      const html = await fetchHtml(listUrl);
+      const $ = load(html);
+      const slide = $('.section_exhibition_slider .slide').first();
+      const venue = normalizeText(slide.find('.slider-content p').first().text()) ?? 'Dechko Uzunov Art Gallery';
+      const headline = normalizeText(slide.find('.slider-content h2').first().text());
+      const imageUrl = extractBackgroundImageUrl(slide.find('.home_exhibition_slider').attr('style'));
+
+      if (!headline) {
+        return [];
+      }
+
+      const range = extractDateRange(headline);
+      const title = normalizeText(normalizeDateText(headline).replace(range.matchedText ?? '', ''));
+
+      if (!title) {
+        return [];
+      }
+
+      const event: ArtEvent = {
+        id: buildId(source, title, venue, range.start),
+        title,
+        venue,
+        address,
+        exhibitionStart: range.start,
+        exhibitionEnd: range.end,
+        eventType: 'exhibition',
+        source,
+        sourceUrl: listUrl,
+        description: undefined,
+        imageUrl,
+        tags: undefined,
+        lastUpdated: new Date().toISOString(),
+      };
+
+      return isCurrentOrUpcomingEvent(event) ? [event] : [];
+    },
+  };
+}
+
+async function collectProgramataExhibitionUrls(startUrl: string, maxPages = 1) {
+  const urls = new Set<string>();
+  let nextPageUrl: string | undefined = startUrl;
+  let page = 0;
+
+  while (nextPageUrl && page < maxPages) {
+    const html = await fetchHtml(nextPageUrl);
+    const $ = load(html);
+
+    $('.post-list-entry h3 a[href]')
+      .toArray()
+      .map((element) => normalizeText($(element).attr('href')))
+      .filter((href): href is string => Boolean(href))
+      .forEach((href) => {
+        if (href.includes('/izlozhbi/izlozhba/')) {
+          urls.add(href);
+        }
+      });
+
+    nextPageUrl = normalizeText($('.pagination .next.page-numbers').attr('href'));
+    page += 1;
+  }
+
+  return [...urls];
+}
+
+function createProgramataImporter(): SourceImporter {
+  const source = 'programata' as const;
+  const listUrl = 'https://programata.bg/izlozhbi/izlozhba/';
+
+  return {
+    source,
+    listUrl,
+    async run() {
+      const exhibitionUrls = await collectProgramataExhibitionUrls(listUrl, 3);
+      const importedEvents: ArtEvent[] = [];
+
+      for (const exhibitionUrl of exhibitionUrls) {
+        try {
+          const html = await fetchHtml(exhibitionUrl);
+          const $ = load(html);
+          const title = normalizeText($('h1').first().text()) ?? normalizeText($('title').first().text()?.split('|')[0]);
+          const imageUrl = normalizeText($('.post-thumbnail img').first().attr('src'));
+          const description = normalizeText($('.post-content p').first().text());
+
+          if (!title) {
+            continue;
+          }
+
+          $('.program .tab-pane')
+            .toArray()
+            .forEach((element) => {
+              const root = $(element);
+              const paneId = root.attr('id');
+              const city = normalizeText($(`button[data-bs-target="#${paneId}"]`).first().text());
+              if (city !== 'София') {
+                return;
+              }
+
+              root.find('.schedule-venue > div')
+                .toArray()
+                .forEach((venueElement) => {
+                  const venueRoot = $(venueElement);
+                  const venue = normalizeText(venueRoot.find('a').first().text());
+                  const fullText = normalizeText(venueRoot.text());
+                  const range = extractDateRange(fullText);
+
+                  if (!venue || !range.start) {
+                    return;
+                  }
+
+                  const event: ArtEvent = {
+                    id: buildId(source, title, venue, range.start),
+                    title,
+                    artist: title.includes('|') ? normalizeText(title.split('|').slice(1).join('|')) : undefined,
+                    venue,
+                    exhibitionStart: range.start,
+                    exhibitionEnd: range.end,
+                    eventType: inferEventType(title, fullText, venue),
+                    source,
+                    sourceUrl: exhibitionUrl,
+                    description,
+                    imageUrl,
+                    tags: undefined,
+                    lastUpdated: new Date().toISOString(),
+                  };
+
+                  if (isCurrentOrUpcomingEvent(event)) {
+                    importedEvents.push(event);
+                  }
+                });
+            });
+        } catch (error) {
+          console.warn(`[programata] skipped ${exhibitionUrl}`, error);
+          continue;
+        }
+      }
+
+      return dedupeEvents(importedEvents);
+    },
+  };
+}
+
 const importers: SourceImporter[] = [
-  createHeuristicImporter('nationalgallery', 'https://nationalgallery.bg/exhibitions/'),
-  createHeuristicImporter('visitsofia', 'https://www.visitsofia.bg/en/exhibitions'),
-  createHeuristicImporter('icasofia', 'https://www.ica-sofia.org/en/ica-gallery/exhibitions'),
-  createHeuristicImporter('toplocentrala', 'https://toplocentrala.bg/en/program/visual'),
+  createCredoBonumImporter(),
+  createHostGalleryImporter(),
+  createDechkoUzunovImporter(),
+  createProgramataImporter(),
 ];
 
 async function main() {
   const existingEvents = await readExistingEvents();
-  const protectedEvents = existingEvents.filter((event) => event.source === 'manual' || event.source === 'sghg');
+  const refreshedSources = new Set<EventSource>(['credobonum', 'hostgallery', 'dechkouzunov', 'programata']);
+  const protectedEvents = existingEvents.filter((event) => !refreshedSources.has(event.source));
+  const refreshedAt = new Date().toISOString();
   const importedEvents: ArtEvent[] = [];
 
   for (const importer of importers) {
@@ -324,7 +820,8 @@ async function main() {
     return;
   }
 
-  const mergedEvents = dedupeEvents([...protectedEvents, ...importedEvents]);
+  const importedEventsWithStableTimestamps = preserveLastUpdated(existingEvents, importedEvents, refreshedAt);
+  const mergedEvents = dedupeEvents([...protectedEvents, ...importedEventsWithStableTimestamps]);
   await fs.writeFile(eventsPath, `${JSON.stringify(mergedEvents, null, 2)}\n`, 'utf8');
   console.log(`Wrote ${mergedEvents.length} Sofia events to public/data/events.json`);
 }

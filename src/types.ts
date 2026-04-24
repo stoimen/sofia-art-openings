@@ -4,6 +4,10 @@ export type EventSource =
   | 'visitsofia'
   | 'icasofia'
   | 'toplocentrala'
+  | 'credobonum'
+  | 'hostgallery'
+  | 'dechkouzunov'
+  | 'programata'
   | 'manual';
 
 export type ArtEvent = {

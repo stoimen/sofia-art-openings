@@ -75,6 +75,7 @@ The importer is intentionally conservative:
 - one importer entry per source
 - isolated failure handling so one bad source does not break the whole import
 - curated `sghg` entries are preserved because that site still needs source-specific selector work
+- unchanged imported events keep their previous `lastUpdated` timestamp, so automated refreshes only create commits when source data actually changes
 
 ## Current source set
 
@@ -84,6 +85,9 @@ Official or venue-run sources:
 - Sofia City Art Gallery: `https://sghg.bg/en/%D0%BD%D0%B0%D1%81%D1%82%D0%BE%D1%8F%D1%89%D0%B8/`
 - ICA-Sofia: `https://www.ica-sofia.org/en/ica-gallery/exhibitions`
 - Toplocentrala visual arts programme: `https://toplocentrala.bg/en/program/visual`
+- Credo Bonum Gallery: `https://credobonum.bg/en/exhibitions/`
+- HOSTGALLERY: `https://host.gallery/`
+- Dechko Uzunov Art Gallery: `https://dug.sghg.bg/en/`
 
 City-wide discovery source:
 
@@ -130,6 +134,17 @@ base: process.env.GITHUB_REPOSITORY
 ```
 
 The workflow file is at `.github/workflows/deploy.yml`.
+
+## Automated refreshes
+
+The repository also includes a scheduled refresh workflow at `.github/workflows/refresh-data.yml`.
+
+- It runs every day at `03:34 UTC`.
+- It executes `npm run import:events`.
+- If `public/data/events.json` changed, it commits the refreshed file back to `main`.
+- It then builds and deploys the updated static site to GitHub Pages in the same workflow run.
+
+This is intentionally separate from the normal push deploy workflow because GitHub Pages is static hosting only: the browser app cannot scrape sources live at runtime.
 
 ## Static hosting limitations and CORS
 

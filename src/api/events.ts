@@ -6,6 +6,10 @@ const validSources = new Set<EventSource>([
   'visitsofia',
   'icasofia',
   'toplocentrala',
+  'credobonum',
+  'hostgallery',
+  'dechkouzunov',
+  'programata',
   'manual',
 ]);
 
@@ -24,6 +28,10 @@ export const sourceLabels: Record<EventSource, string> = {
   visitsofia: 'Visit Sofia',
   icasofia: 'ICA-Sofia',
   toplocentrala: 'Топлоцентрала',
+  credobonum: 'Credo Bonum',
+  hostgallery: 'HOSTGALLERY',
+  dechkouzunov: 'Дечко Узунов',
+  programata: 'Програмата',
   manual: 'Ръчно',
 };
 
@@ -33,6 +41,10 @@ export const sourceReliability: Record<EventSource, number> = {
   visitsofia: 2,
   icasofia: 1,
   toplocentrala: 1,
+  credobonum: 1,
+  hostgallery: 1,
+  dechkouzunov: 1,
+  programata: 3,
   manual: 3,
 };
 
