@@ -108,7 +108,7 @@ button {
   margin: 0 0 10px;
   font-size: clamp(2.4rem, 8vw, 4.4rem);
   line-height: 0.94;
-  max-width: 9ch;
+  max-width: 12ch;
 }
 
 .lead {
@@ -448,7 +448,7 @@ button {
   }
 
   .app-header {
-    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+    grid-template-columns: minmax(0, 1.9fr) minmax(260px, 0.8fr);
     align-items: stretch;
   }
 
