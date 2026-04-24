@@ -17,18 +17,18 @@ function buildMapsUrl(event: DisplayEvent) {
 
 export function EventCard({ event, locationEnabled, onToggleFavorite }: EventCardProps) {
   const tagList = event.tags?.length ? event.tags : [event.eventType];
-  const favoriteLabel = event.isFavorite ? 'Remove from favorites' : 'Save to favorites';
+  const favoriteLabel = event.isFavorite ? 'Премахни от запазените' : 'Запази';
 
   return (
     <article className="event-card">
       <div className="event-card-header">
-        <div className="tag-row" aria-label="Event tags">
+        <div className="tag-row" aria-label="Етикети на събитието">
           {tagList.map((tag) => (
             <span key={tag} className="tag">
               {tag}
             </span>
           ))}
-          {event.distanceKm !== undefined && event.distanceKm <= 3 ? <span className="tag nearby">Near you</span> : null}
+          {event.distanceKm !== undefined && event.distanceKm <= 3 ? <span className="tag nearby">Близо до вас</span> : null}
         </div>
 
         <button
@@ -56,23 +56,23 @@ export function EventCard({ event, locationEnabled, onToggleFavorite }: EventCar
 
         <dl className="event-meta">
           <div>
-            <dt>Venue</dt>
+            <dt>Място</dt>
             <dd>{event.venue}</dd>
           </div>
           <div>
-            <dt>Address</dt>
-            <dd>{event.address ?? 'Address TBA'}</dd>
+            <dt>Адрес</dt>
+            <dd>{event.address ?? 'Адресът не е уточнен'}</dd>
           </div>
           <div>
-            <dt>Opening</dt>
+            <dt>Откриване</dt>
             <dd>{formatOpeningWindow(event)}</dd>
           </div>
           <div>
-            <dt>Exhibition</dt>
+            <dt>Изложба</dt>
             <dd>{formatDateRange(event.exhibitionStart, event.exhibitionEnd)}</dd>
           </div>
           <div>
-            <dt>Distance</dt>
+            <dt>Разстояние</dt>
             <dd>
               {formatDistance(event.distanceKm, {
                 locationEnabled,
@@ -90,8 +90,8 @@ export function EventCard({ event, locationEnabled, onToggleFavorite }: EventCar
           type="button"
           className="icon-circle-button"
           onClick={() => downloadEventIcs(event)}
-          aria-label="Add to calendar"
-          title="Add to calendar"
+          aria-label="Добави в календара"
+          title="Добави в календара"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M7 3a1 1 0 0 1 1 1v1h8V4a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v11a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V7a2 2 0 0 1 2-2h1V4a1 1 0 0 1 1-1Z" />
@@ -104,8 +104,8 @@ export function EventCard({ event, locationEnabled, onToggleFavorite }: EventCar
           href={buildMapsUrl(event)}
           target="_blank"
           rel="noreferrer"
-          aria-label={`Open ${event.venue} in Google Maps`}
-          title="Open in Google Maps"
+          aria-label={`Отвори ${event.venue} в Google Maps`}
+          title="Отвори в Google Maps"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 21C10.8 19.5 6 13.6 6 10a6 6 0 1 1 12 0c0 3.6-4.8 9.5-6 11Z" />
@@ -117,8 +117,8 @@ export function EventCard({ event, locationEnabled, onToggleFavorite }: EventCar
           href={event.sourceUrl}
           target="_blank"
           rel="noreferrer"
-          aria-label="Open source page in a new tab"
-          title="Open source page"
+          aria-label="Отвори източника в нов раздел"
+          title="Отвори източника"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M14 5h5v5h-2V8.41l-6.29 6.3-1.42-1.42 6.3-6.29H14V5Z" />

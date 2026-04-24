@@ -16,7 +16,7 @@ export function EventList({ events, locationEnabled, onToggleFavorite }: EventLi
       {groups.map((group) => (
         <section key={group.key} className="event-group" aria-labelledby={`group-${group.key}`}>
           <div className="group-heading">
-            <p className="eyebrow">Date</p>
+            <p className="eyebrow">Дата</p>
             <h2 id={`group-${group.key}`}>{group.label}</h2>
           </div>
           <div className="event-stack">

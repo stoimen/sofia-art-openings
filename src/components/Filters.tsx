@@ -3,6 +3,7 @@ import { sourceLabels } from '../api/events';
 
 export type FilterState = {
   timeframe: TimeframeFilter;
+  upcomingOnly: boolean;
   openingsOnly: boolean;
   savedOnly: boolean;
   search: string;
@@ -18,10 +19,10 @@ type FiltersProps = {
 };
 
 const timeframeOptions: Array<{ value: TimeframeFilter; label: string }> = [
-  { value: 'all', label: 'All' },
-  { value: 'today', label: 'Today' },
-  { value: 'tomorrow', label: 'Tomorrow' },
-  { value: 'week', label: 'This week' },
+  { value: 'all', label: 'Всички' },
+  { value: 'today', label: 'Днес' },
+  { value: 'tomorrow', label: 'Утре' },
+  { value: 'week', label: 'Тази седмица' },
 ];
 
 const distanceOptions = ['all', 1, 3, 5, 10, 20] as const;
@@ -31,17 +32,17 @@ export function Filters({ value, hasLocation, onChange, onReset }: FiltersProps)
     <section className="filters-panel" aria-labelledby="filters-title">
       <div className="filters-head">
         <div>
-          <p className="eyebrow">Filters</p>
-          <h2 id="filters-title">Focus the list</h2>
+          <p className="eyebrow">Филтри</p>
+          <h2 id="filters-title">Фокусирайте списъка</h2>
         </div>
         <button type="button" className="ghost-button" onClick={onReset}>
-          Reset
+          Нулиране
         </button>
       </div>
 
       <div className="filter-grid">
         <fieldset className="chip-group">
-          <legend className="chip-legend">Dates</legend>
+          <legend className="chip-legend">Дати</legend>
           {timeframeOptions.map((option) => (
             <button
               key={option.value}
@@ -56,22 +57,22 @@ export function Filters({ value, hasLocation, onChange, onReset }: FiltersProps)
         </fieldset>
 
         <label className="field">
-          <span>Search</span>
+          <span>Търсене</span>
           <input
             type="search"
-            placeholder="Artist, venue, neighborhood…"
+            placeholder="Артист, място, квартал…"
             value={value.search}
             onChange={(event) => onChange({ ...value, search: event.target.value })}
           />
         </label>
 
         <label className="field">
-          <span>Source</span>
+          <span>Източник</span>
           <select
             value={value.source}
             onChange={(event) => onChange({ ...value, source: event.target.value as FilterState['source'] })}
           >
-            <option value="all">All sources</option>
+            <option value="all">Всички източници</option>
             {Object.entries(sourceLabels).map(([source, label]) => (
               <option key={source} value={source}>
                 {label}
@@ -81,7 +82,7 @@ export function Filters({ value, hasLocation, onChange, onReset }: FiltersProps)
         </label>
 
         <label className="field">
-          <span>Max distance</span>
+          <span>Макс. разстояние</span>
           <select
             value={String(value.maxDistanceKm)}
             disabled={!hasLocation}
@@ -94,7 +95,7 @@ export function Filters({ value, hasLocation, onChange, onReset }: FiltersProps)
           >
             {distanceOptions.map((option) => (
               <option key={String(option)} value={String(option)}>
-                {option === 'all' ? 'Any distance' : `${option} km`}
+                {option === 'all' ? 'Без ограничение' : `${option} км`}
               </option>
             ))}
           </select>
@@ -103,10 +104,19 @@ export function Filters({ value, hasLocation, onChange, onReset }: FiltersProps)
         <label className="toggle-field">
           <input
             type="checkbox"
+            checked={value.upcomingOnly}
+            onChange={(event) => onChange({ ...value, upcomingOnly: event.target.checked })}
+          />
+          <span>Само предстоящи</span>
+        </label>
+
+        <label className="toggle-field">
+          <input
+            type="checkbox"
             checked={value.openingsOnly}
             onChange={(event) => onChange({ ...value, openingsOnly: event.target.checked })}
           />
-          <span>Openings only</span>
+          <span>Само откривания</span>
         </label>
 
         <label className="toggle-field">
@@ -115,7 +125,7 @@ export function Filters({ value, hasLocation, onChange, onReset }: FiltersProps)
             checked={value.savedOnly}
             onChange={(event) => onChange({ ...value, savedOnly: event.target.checked })}
           />
-          <span>Saved only</span>
+          <span>Само запазени</span>
         </label>
       </div>
     </section>

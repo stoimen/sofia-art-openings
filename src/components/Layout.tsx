@@ -26,32 +26,32 @@ export function Layout({
     <div className="app-shell">
       <header className="app-header">
         <div className="brand-block">
-          <p className="eyebrow">Sofia Art Calendar</p>
-          <h1>Sofia Art</h1>
+          <p className="eyebrow">Календар на софийското изкуство</p>
+          <h1>София Арт</h1>
           <p className="lead">
-            Upcoming exhibitions, openings, and contemporary art events across Sofia. Share your location to
-            prioritize nearby venues.
+            Предстоящи изложби, откривания и събития за съвременно изкуство в София. Споделете местоположението си,
+            за да виждате първо близките места.
           </p>
         </div>
 
-        <div className="hero-panel" aria-label="App summary">
+        <div className="hero-panel" aria-label="Обобщение на приложението">
           <div>
-            <p className="hero-label">Near me</p>
-            <strong>{locationEnabled ? `${nearbyCount} events with distance` : 'Enable location'}</strong>
+            <p className="hero-label">Близо до мен</p>
+            <strong>{locationEnabled ? `${nearbyCount} събития с разстояние` : 'Включете локация'}</strong>
           </div>
           <div>
-            <p className="hero-label">Upcoming</p>
-            <strong>{totalEvents} events loaded</strong>
+            <p className="hero-label">Предстоящи</p>
+            <strong>{totalEvents} заредени събития</strong>
           </div>
           <div>
-            <p className="hero-label">Saved</p>
-            <strong>{favoriteCount} shortlisted</strong>
+            <p className="hero-label">Запазени</p>
+            <strong>{favoriteCount} в списъка</strong>
           </div>
           <button type="button" className="refresh-button" onClick={onRefresh} disabled={isRefreshing}>
-            {isRefreshing ? 'Refreshing…' : 'Refresh'}
+            {isRefreshing ? 'Обновяване…' : 'Обнови'}
           </button>
           <p className="update-stamp">
-            {lastUpdated ? `Last updated ${formatDateTime(lastUpdated)}` : 'Last updated timestamp unavailable'}
+            {lastUpdated ? `Последно обновяване ${formatDateTime(lastUpdated)}` : 'Няма информация за последно обновяване'}
           </p>
         </div>
       </header>
@@ -59,7 +59,7 @@ export function Layout({
       <main>{children}</main>
 
       <footer className="app-footer">
-        <p>Built as a static React + Vite PWA for GitHub Pages with optional local import scripts.</p>
+        <p>Изградено като статично React + Vite PWA за GitHub Pages с опционални локални импорт скриптове.</p>
       </footer>
     </div>
   );

@@ -1,6 +1,8 @@
 import type { ArtEvent, DisplayEvent, TimeframeFilter } from '../types';
 
-const dateTimeFormatter = new Intl.DateTimeFormat(undefined, {
+const locale = 'bg-BG';
+
+const dateTimeFormatter = new Intl.DateTimeFormat(locale, {
   weekday: 'short',
   month: 'short',
   day: 'numeric',
@@ -8,18 +10,18 @@ const dateTimeFormatter = new Intl.DateTimeFormat(undefined, {
   minute: '2-digit',
 });
 
-const dateFormatter = new Intl.DateTimeFormat(undefined, {
+const dateFormatter = new Intl.DateTimeFormat(locale, {
   weekday: 'long',
   month: 'long',
   day: 'numeric',
 });
 
-const compactDateFormatter = new Intl.DateTimeFormat(undefined, {
+const compactDateFormatter = new Intl.DateTimeFormat(locale, {
   month: 'short',
   day: 'numeric',
 });
 
-const timeFormatter = new Intl.DateTimeFormat(undefined, {
+const timeFormatter = new Intl.DateTimeFormat(locale, {
   hour: 'numeric',
   minute: '2-digit',
 });
@@ -70,7 +72,7 @@ export function getEventEndDate(event: ArtEvent) {
 
 export function formatDateTime(value?: string) {
   const date = parseDateValue(value);
-  return date ? dateTimeFormatter.format(date) : 'Time TBA';
+  return date ? dateTimeFormatter.format(date) : 'Часът не е уточнен';
 }
 
 export function formatDateRange(start?: string, end?: string) {
@@ -78,11 +80,11 @@ export function formatDateRange(start?: string, end?: string) {
   const endDate = parseDateValue(end, true);
 
   if (!startDate && !endDate) {
-    return 'Dates TBA';
+    return 'Датите не са уточнени';
   }
 
   if (startDate && endDate) {
-    return `${compactDateFormatter.format(startDate)} to ${compactDateFormatter.format(endDate)}`;
+    return `${compactDateFormatter.format(startDate)} - ${compactDateFormatter.format(endDate)}`;
   }
 
   return compactDateFormatter.format(startDate ?? endDate ?? new Date());
@@ -90,7 +92,7 @@ export function formatDateRange(start?: string, end?: string) {
 
 export function formatOpeningWindow(event: ArtEvent) {
   if (!event.openingStart) {
-    return 'Opening time TBA';
+    return 'Часът на откриването не е уточнен';
   }
 
   if (!event.openingEnd) {
@@ -104,16 +106,16 @@ export function formatOpeningWindow(event: ArtEvent) {
     return formatDateTime(event.openingStart);
   }
 
-  return `${dateTimeFormatter.format(openingStart)} to ${timeFormatter.format(openingEnd)}`;
+  return `${dateTimeFormatter.format(openingStart)} - ${timeFormatter.format(openingEnd)}`;
 }
 
 export function formatGroupingLabel(dateKey: string) {
   if (dateKey === 'undated') {
-    return 'Date TBA';
+    return 'Дата не е уточнена';
   }
 
   const date = parseDateValue(dateKey);
-  return date ? dateFormatter.format(date) : 'Date TBA';
+  return date ? dateFormatter.format(date) : 'Дата не е уточнена';
 }
 
 export function getGroupingKey(event: ArtEvent) {
@@ -122,6 +124,19 @@ export function getGroupingKey(event: ArtEvent) {
 }
 
 export function isUpcomingEvent(event: ArtEvent, now = new Date()) {
+  const today = new Date(now);
+  today.setHours(0, 0, 0, 0);
+  const endDate = getEventEndDate(event);
+
+  if (endDate) {
+    return endDate.getTime() >= today.getTime();
+  }
+
+  const anchorDate = getEventAnchorDate(event);
+  return anchorDate.getTime() >= today.getTime();
+}
+
+export function isFutureStartEvent(event: ArtEvent, now = new Date()) {
   const anchorDate = getEventAnchorDate(event);
   const today = new Date(now);
   today.setHours(0, 0, 0, 0);

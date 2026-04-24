@@ -24,10 +24,11 @@ export default defineConfig({
         'data/venues.json',
       ],
       manifest: {
-        name: 'Sofia Art Openings',
-        short_name: 'Art Openings',
+        name: 'София Арт',
+        short_name: 'София Арт',
         description:
-          'Mobile-first Sofia exhibition calendar with nearby ranking and offline support.',
+          'Мобилен календар за софийски изложби с подреждане по близост и офлайн поддръжка.',
+        lang: 'bg',
         theme_color: '#111827',
         background_color: '#f8f3ea',
         display: 'standalone',

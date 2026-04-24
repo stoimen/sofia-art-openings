@@ -34,19 +34,19 @@ type FormatDistanceOptions = {
 export function formatDistance(distanceKm: number | undefined, options: FormatDistanceOptions) {
   if (distanceKm === undefined) {
     if (!options.locationEnabled) {
-      return 'Share location to calculate distance';
+      return 'Споделете местоположението си, за да изчислим разстоянието';
     }
 
     if (!options.hasCoordinates) {
-      return 'Venue coordinates unavailable';
+      return 'Няма координати за локацията';
     }
 
-    return 'Distance unavailable';
+    return 'Разстоянието не е налично';
   }
 
   if (distanceKm < 1) {
-    return `${Math.round(distanceKm * 1000)} m away`;
+    return `На ${Math.round(distanceKm * 1000)} м`;
   }
 
-  return `${distanceKm.toFixed(1)} km away`;
+  return `На ${distanceKm.toFixed(1)} км`;
 }

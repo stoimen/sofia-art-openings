@@ -7,15 +7,15 @@ type EmptyStateProps = {
 export function EmptyState({ hasFilters, savedOnly, favoriteCount }: EmptyStateProps) {
   const message = savedOnly
     ? favoriteCount > 0
-      ? 'No saved events match the current filters. Try widening the date window, source selection, or distance filter.'
-      : 'You have not saved any events yet. Use the bookmark button on an event card to build a shortlist.'
+      ? 'Нито едно запазено събитие не отговаря на текущите филтри. Разширете периода, източниците или филтъра за разстояние.'
+      : 'Още нямате запазени събития. Използвайте бутона за запазване в картата на събитието.'
     : hasFilters
-      ? 'Try widening the date window, source selection, or distance filter.'
-      : 'The local dataset is empty right now. Refresh or update public/data/events.json.';
+      ? 'Разширете периода, източниците или филтъра за разстояние.'
+      : 'Локалният набор от данни е празен в момента. Обновете или актуализирайте public/data/events.json.';
 
   return (
     <section className="state-panel" aria-live="polite">
-      <h2>No matching events</h2>
+      <h2>Няма съвпадащи събития</h2>
       <p>{message}</p>
     </section>
   );

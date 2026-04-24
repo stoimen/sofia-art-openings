@@ -19,12 +19,12 @@ const validEventTypes = new Set<ArtEvent['eventType']>([
 ]);
 
 export const sourceLabels: Record<EventSource, string> = {
-  nationalgallery: 'National Gallery',
-  sghg: 'Sofia City Art Gallery',
+  nationalgallery: 'Национална галерия',
+  sghg: 'Софийска градска художествена галерия',
   visitsofia: 'Visit Sofia',
   icasofia: 'ICA-Sofia',
-  toplocentrala: 'Toplocentrala',
-  manual: 'Manual',
+  toplocentrala: 'Топлоцентрала',
+  manual: 'Ръчно',
 };
 
 export const sourceReliability: Record<EventSource, number> = {
@@ -102,12 +102,27 @@ function createFallbackId(event: Omit<ArtEvent, 'id'>) {
 function normalizeTags(event: Pick<ArtEvent, 'eventType' | 'tags'>) {
   const tags = new Set<string>();
   const eventTypeTagMap: Record<ArtEvent['eventType'], string> = {
-    opening: 'Opening',
-    exhibition: 'Exhibition',
-    talk: 'Talk',
-    performance: 'Performance',
-    screening: 'Screening',
-    other: 'Other',
+    opening: 'Откриване',
+    exhibition: 'Изложба',
+    talk: 'Разговор',
+    performance: 'Пърформанс',
+    screening: 'Прожекция',
+    other: 'Друго',
+  };
+  const tagTranslations: Record<string, string> = {
+    Opening: 'Откриване',
+    Exhibition: 'Изложба',
+    Talk: 'Разговор',
+    Performance: 'Пърформанс',
+    Screening: 'Прожекция',
+    Other: 'Друго',
+    'Contemporary Art': 'Съвременно изкуство',
+    'Modern Bulgarian Art': 'Модерно българско изкуство',
+    Painting: 'Живопис',
+    Photography: 'Фотография',
+    Upcoming: 'Предстоящо',
+    Retrospective: 'Ретроспектива',
+    Immersive: 'Имерсивна изложба',
   };
 
   tags.add(eventTypeTagMap[event.eventType]);
@@ -115,7 +130,7 @@ function normalizeTags(event: Pick<ArtEvent, 'eventType' | 'tags'>) {
   for (const rawTag of event.tags ?? []) {
     const tag = normalizeText(rawTag);
     if (tag) {
-      tags.add(tag);
+      tags.add(tagTranslations[tag] ?? tag);
     }
   }
 
@@ -254,7 +269,7 @@ export async function loadEvents(options: LoadEventsOptions = {}) {
   });
 
   if (!response.ok) {
-    throw new Error(`Failed to load events.json (${response.status})`);
+    throw new Error(`Неуспешно зареждане на events.json (${response.status})`);
   }
 
   const data = (await response.json()) as unknown;

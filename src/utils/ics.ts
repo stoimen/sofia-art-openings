@@ -54,7 +54,7 @@ export function createEventIcs(event: ArtEvent) {
   }
 
   const location = event.address ? `${event.venue}, ${event.address}` : event.venue;
-  const descriptionLines = [event.description, `Source: ${event.sourceUrl}`].filter(Boolean).join('\n\n');
+  const descriptionLines = [event.description, `Източник: ${event.sourceUrl}`].filter(Boolean).join('\n\n');
 
   const dateLines = window.allDay
     ? [
@@ -66,7 +66,7 @@ export function createEventIcs(event: ArtEvent) {
   return [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Sofia Art Openings//EN',
+    'PRODID:-//Sofia Art Openings//BG',
     'BEGIN:VEVENT',
     `UID:${event.id}@sofia-art-openings`,
     `DTSTAMP:${formatUtcDate(new Date())}`,

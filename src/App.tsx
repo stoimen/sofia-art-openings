@@ -8,12 +8,13 @@ import { Layout } from './components/Layout';
 import { LocationPermission } from './components/LocationPermission';
 import type { ArtEvent, DisplayEvent, LocationPermissionStatus } from './types';
 import { haversineDistanceKm } from './utils/distance';
-import { getEventAnchorDate, matchesTimeframe, isUpcomingEvent } from './utils/date';
+import { getEventAnchorDate, isFutureStartEvent, matchesTimeframe, isUpcomingEvent } from './utils/date';
 
 const FAVORITES_STORAGE_KEY = 'sofia-art-openings:favorites';
 
 const defaultFilters: FilterState = {
   timeframe: 'all',
+  upcomingOnly: true,
   openingsOnly: false,
   savedOnly: false,
   search: '',
@@ -99,7 +100,7 @@ export default function App() {
           return;
         }
 
-        setErrorMessage(error instanceof Error ? error.message : 'Unknown error while loading events.');
+        setErrorMessage(error instanceof Error ? error.message : 'Възникна неизвестна грешка при зареждане на събитията.');
       } finally {
         if (!controller.signal.aborted) {
           setLoading(false);
@@ -249,6 +250,10 @@ export default function App() {
       isFavorite: favoriteIds.includes(event.id),
     }))
     .filter((event) => {
+      if (filters.upcomingOnly && !isFutureStartEvent(event)) {
+        return false;
+      }
+
       if (filters.openingsOnly && event.eventType !== 'opening') {
         return false;
       }
@@ -294,12 +299,13 @@ export default function App() {
 
   const nearbyCount = displayedEvents.filter((event) => event.distanceKm !== undefined).length;
   const hasFiltersApplied =
-    filters.timeframe !== 'all' ||
-    filters.openingsOnly ||
-    filters.savedOnly ||
+    filters.timeframe !== defaultFilters.timeframe ||
+    filters.upcomingOnly !== defaultFilters.upcomingOnly ||
+    filters.openingsOnly !== defaultFilters.openingsOnly ||
+    filters.savedOnly !== defaultFilters.savedOnly ||
     filters.search.trim().length > 0 ||
-    filters.source !== 'all' ||
-    filters.maxDistanceKm !== 'all';
+    filters.source !== defaultFilters.source ||
+    filters.maxDistanceKm !== defaultFilters.maxDistanceKm;
 
   return (
     <Layout
@@ -330,8 +336,8 @@ export default function App() {
 
       {loading && events.length === 0 ? (
         <section className="state-panel" aria-live="polite">
-          <h2>Loading events</h2>
-          <p>Reading the latest static dataset from <code>/data/events.json</code>.</p>
+          <h2>Зареждане на събития</h2>
+          <p>Четене на последния статичен набор от данни от <code>/data/events.json</code>.</p>
         </section>
       ) : null}
 
