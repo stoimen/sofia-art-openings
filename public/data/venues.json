@@ -1,0 +1,56 @@
+{
+  "1 gen. gurko st., 1000 sofia, bulgaria": {
+    "latitude": 42.694472,
+    "longitude": 23.323941,
+    "displayName": "Sofia City Art Gallery, 1 Gen. Gurko St., 1000 Sofia, Bulgaria",
+    "updatedAt": "2026-04-24T12:00:00.000Z"
+  },
+  "15 yanko sakazov blvd., 1527 sofia, bulgaria": {
+    "latitude": 42.697438,
+    "longitude": 23.337718,
+    "displayName": "Vaska Emanouilova Gallery, 15 Yanko Sakazov Blvd., 1527 Sofia, Bulgaria",
+    "updatedAt": "2026-04-24T12:00:00.000Z"
+  },
+  "125 g. s. rakovski st., 1000 sofia, bulgaria": {
+    "latitude": 42.694996,
+    "longitude": 23.331225,
+    "displayName": "UBA – Rayko Aleksiev Hall, 125 G. S. Rakovski St., 1000 Sofia, Bulgaria",
+    "updatedAt": "2026-04-24T12:00:00.000Z"
+  },
+  "1, 19th february st., 1000 sofia, bulgaria": {
+    "latitude": 42.695859,
+    "longitude": 23.335526,
+    "displayName": "Kvadrat 500, 1, 19th February St., 1000 Sofia, Bulgaria",
+    "updatedAt": "2026-04-24T12:00:00.000Z"
+  },
+  "1 knyaz alexander i square, 1000 sofia, bulgaria": {
+    "latitude": 42.69461,
+    "longitude": 23.324983,
+    "displayName": "The Palace, 1 Knyaz Alexander I Square, 1000 Sofia, Bulgaria",
+    "updatedAt": "2026-04-24T12:00:00.000Z"
+  },
+  "2, 11 august st., 1000 sofia, bulgaria": {
+    "latitude": 42.697369,
+    "longitude": 23.334865,
+    "displayName": "Vera Nedkova, 2, 11 August St., 1000 Sofia, Bulgaria",
+    "updatedAt": "2026-04-24T12:00:00.000Z"
+  },
+  "95 vasil levski blvd., 1000 sofia, bulgaria": {
+    "latitude": 42.69563,
+    "longitude": 23.33637,
+    "displayName": "Kvadrat 500 immersive exhibition entrance, 95 Vasil Levski Blvd., 1000 Sofia, Bulgaria",
+    "updatedAt": "2026-04-24T12:00:00.000Z"
+  },
+  "134 vasil levski blvd. (entrance from ekzarh yosif st.), 1504 sofia, bulgaria": {
+    "latitude": 42.702282,
+    "longitude": 23.334123,
+    "displayName": "ICA-Sofia Gallery, 134 Vasil Levski Blvd. (entrance from Ekzarh Yosif St.), 1504 Sofia, Bulgaria",
+    "updatedAt": "2026-04-24T12:00:00.000Z"
+  },
+  "5 emil bersinski str., 1408 sofia, bulgaria": {
+    "latitude": 42.67845,
+    "longitude": 23.318491,
+    "displayName": "Toplocentrala, 5 Emil Bersinski Str., 1408 Sofia, Bulgaria",
+    "updatedAt": "2026-04-24T12:00:00.000Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "sofia-art-openings",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "import:events": "node --experimental-strip-types scripts/import-events.ts",
+    "geocode:venues": "node --experimental-strip-types scripts/geocode-venues.ts",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.4.1",
+    "cheerio": "^1.0.0",
+    "esbuild": "0.21.5",
+    "eslint": "^9.24.0",
+    "globals": "^16.0.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.1",
+    "vite": "^5.4.19",
+    "vite-plugin-pwa": "^0.20.5"
+  }
+}
