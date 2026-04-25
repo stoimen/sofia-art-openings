@@ -321,6 +321,353 @@ async function fetchHtml(url: string) {
   return response.text();
 }
 
+async function fetchHtmlCached(url: string, cache: Map<string, Promise<string>>) {
+  let request = cache.get(url);
+
+  if (!request) {
+    request = fetchHtml(url);
+    cache.set(url, request);
+  }
+
+  return request;
+}
+
+function toAbsoluteUrl(value?: string, baseUrl?: string) {
+  const text = normalizeText(value);
+  if (!text) {
+    return undefined;
+  }
+
+  try {
+    return new URL(text, baseUrl).toString();
+  } catch {
+    return undefined;
+  }
+}
+
+function stripWordPressImageSize(url: string) {
+  return url.replace(/-\d+x\d+(?=\.(?:avif|gif|jpe?g|png|webp)(?:[?#].*)?$)/i, '');
+}
+
+function normalizeImageUrl(value?: string, baseUrl?: string) {
+  const absoluteUrl = toAbsoluteUrl(value, baseUrl);
+  if (!absoluteUrl) {
+    return undefined;
+  }
+
+  return absoluteUrl.includes('/wp-content/uploads/') ? stripWordPressImageSize(absoluteUrl) : absoluteUrl;
+}
+
+function isLikelyImageUrl(url: string) {
+  return /\.(?:avif|gif|jpe?g|png|webp)(?:[?#].*)?$/i.test(url);
+}
+
+function isLikelyContentImage(url: string) {
+  if (!isLikelyImageUrl(url)) {
+    return false;
+  }
+
+  const haystack = url.toLowerCase();
+  const blockedFragments = [
+    '/logo',
+    'logo-',
+    '/icon',
+    'icon-',
+    '/flags/',
+    'loader',
+    'clock.',
+    'phone.',
+    'search-black',
+    'youtube-icon',
+    'fb-icon',
+    'instagram-logo',
+    'gerb-moc',
+    'en-logo',
+    'bg-logo',
+  ];
+
+  return !blockedFragments.some((fragment) => haystack.includes(fragment));
+}
+
+function addImageCandidate(candidates: string[], value: string | undefined, baseUrl?: string) {
+  const imageUrl = normalizeImageUrl(value, baseUrl);
+  if (!imageUrl || !isLikelyContentImage(imageUrl) || candidates.includes(imageUrl)) {
+    return;
+  }
+
+  candidates.push(imageUrl);
+}
+
+function addJsonLdImageCandidates(node: unknown, candidates: string[], baseUrl?: string) {
+  if (!node) {
+    return;
+  }
+
+  if (typeof node === 'string') {
+    addImageCandidate(candidates, node, baseUrl);
+    return;
+  }
+
+  if (Array.isArray(node)) {
+    node.forEach((value) => addJsonLdImageCandidates(value, candidates, baseUrl));
+    return;
+  }
+
+  if (typeof node !== 'object') {
+    return;
+  }
+
+  const record = node as Record<string, unknown>;
+
+  if ('image' in record) {
+    addJsonLdImageCandidates(record.image, candidates, baseUrl);
+  }
+
+  if ('thumbnailUrl' in record) {
+    addJsonLdImageCandidates(record.thumbnailUrl, candidates, baseUrl);
+  }
+
+  const typeName = Array.isArray(record['@type']) ? String(record['@type'][0] ?? '') : String(record['@type'] ?? '');
+  if (typeName.toLowerCase().includes('image')) {
+    addJsonLdImageCandidates(record.url, candidates, baseUrl);
+  }
+
+  for (const value of Object.values(record)) {
+    if (value && typeof value === 'object') {
+      addJsonLdImageCandidates(value, candidates, baseUrl);
+    }
+  }
+}
+
+function extractJsonLdImageCandidates(html: string, baseUrl?: string) {
+  const $ = load(html);
+  const candidates: string[] = [];
+
+  $('script[type="application/ld+json"]')
+    .toArray()
+    .map((element) => $(element).text())
+    .filter(Boolean)
+    .forEach((rawBlock) => {
+      try {
+        addJsonLdImageCandidates(JSON.parse(rawBlock), candidates, baseUrl);
+      } catch {
+        return;
+      }
+    });
+
+  return candidates;
+}
+
+function normalizeMatchText(value?: string) {
+  const text = normalizeText(value);
+  if (!text) {
+    return '';
+  }
+
+  return text
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/\p{Mark}+/gu, '')
+    .replace(/&/g, ' and ')
+    .replace(/[^0-9\p{Letter}]+/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function titleMatchScore(expectedTitle: string, candidateTitle?: string) {
+  const expected = normalizeMatchText(expectedTitle);
+  const candidate = normalizeMatchText(candidateTitle);
+
+  if (!expected || !candidate) {
+    return 0;
+  }
+
+  if (expected === candidate || candidate.includes(expected) || expected.includes(candidate)) {
+    return 1;
+  }
+
+  const expectedTokens = [...new Set(expected.split(' ').filter((token) => token.length > 1))];
+  if (expectedTokens.length === 0) {
+    return 0;
+  }
+
+  const candidateTokens = new Set(candidate.split(' ').filter((token) => token.length > 1));
+  const matchedTokens = expectedTokens.filter((token) => candidateTokens.has(token)).length;
+
+  return matchedTokens / expectedTokens.length;
+}
+
+function extractGenericImageFromHtml(html: string, baseUrl: string) {
+  const $ = load(html);
+  const candidates: string[] = [];
+
+  addImageCandidate(candidates, $('meta[property="og:image"]').attr('content'), baseUrl);
+  addImageCandidate(candidates, $('meta[name="twitter:image"]').attr('content'), baseUrl);
+  addImageCandidate(candidates, $('meta[name="twitter:image:src"]').attr('content'), baseUrl);
+
+  extractJsonLdImageCandidates(html, baseUrl).forEach((candidate) => addImageCandidate(candidates, candidate, baseUrl));
+
+  $('.gallery-item a[href], #jevents-details-gallery img, img[itemprop="image"], .itemImage img, .itemImageBlock img, .post-thumbnail img, .entry-content img, article img')
+    .toArray()
+    .forEach((element) => {
+      const root = $(element);
+      addImageCandidate(candidates, root.attr('href') ?? root.attr('src'), baseUrl);
+    });
+
+  return candidates[0];
+}
+
+function extractNationalGalleryDetailImage(html: string, sourceUrl: string) {
+  const $ = load(html);
+  const candidates: string[] = [];
+
+  $('.gallery-item a[href], .gallery-item img')
+    .toArray()
+    .forEach((element) => {
+      const root = $(element);
+      addImageCandidate(candidates, root.attr('href') ?? root.attr('src'), sourceUrl);
+    });
+
+  return candidates[0] ?? extractGenericImageFromHtml(html, sourceUrl);
+}
+
+function extractNationalGalleryListImage(html: string, event: ArtEvent) {
+  const $ = load(html);
+  let bestMatch:
+    | {
+        imageUrl: string;
+        score: number;
+      }
+    | undefined;
+
+  $('article.exhibition, article.type-exhibition')
+    .toArray()
+    .forEach((article) => {
+      const root = $(article);
+      const candidateTitle = normalizeText(root.find('.entry-title').text());
+      const score = titleMatchScore(event.title, candidateTitle);
+      const imageUrl = normalizeImageUrl(root.find('.entry-format img').first().attr('src'), event.sourceUrl);
+
+      if (!imageUrl || score < 0.6) {
+        return;
+      }
+
+      if (!bestMatch || score > bestMatch.score) {
+        bestMatch = { imageUrl, score };
+      }
+    });
+
+  return bestMatch?.imageUrl;
+}
+
+function extractSghgListImage(html: string, event: ArtEvent) {
+  const $ = load(html);
+  let bestMatch:
+    | {
+        imageUrl: string;
+        score: number;
+      }
+    | undefined;
+
+  $('li.ongoing-exhibition')
+    .toArray()
+    .forEach((item) => {
+      const root = $(item);
+      const candidateTitle = normalizeText(root.find('.img-description').text());
+      const score = titleMatchScore(event.title, candidateTitle);
+      const imageUrl = normalizeImageUrl(root.find('img.ongoing-exhibition-image').first().attr('src'), event.sourceUrl);
+
+      if (!imageUrl || score < 0.6) {
+        return;
+      }
+
+      if (!bestMatch || score > bestMatch.score) {
+        bestMatch = { imageUrl, score };
+      }
+    });
+
+  return bestMatch?.imageUrl;
+}
+
+function extractVisitSofiaImage(html: string, sourceUrl: string) {
+  const $ = load(html);
+  const imageUrl =
+    normalizeImageUrl($('#jevents-details-gallery img.jev_image').first().attr('src'), sourceUrl) ??
+    normalizeImageUrl($('.jev_image').first().attr('src'), sourceUrl);
+
+  return imageUrl ?? extractGenericImageFromHtml(html, sourceUrl);
+}
+
+function extractIcaSofiaImage(html: string, sourceUrl: string) {
+  const $ = load(html);
+  const jsonLdImages = extractJsonLdImageCandidates(html, sourceUrl);
+  const preferredJsonLdImage = jsonLdImages.find((imageUrl) => imageUrl.toLowerCase().includes('_xl.')) ?? jsonLdImages[0];
+
+  return (
+    preferredJsonLdImage ??
+    normalizeImageUrl($('img[itemprop="image"]').first().attr('src'), sourceUrl) ??
+    normalizeImageUrl($('.itemImage img').first().attr('src'), sourceUrl) ??
+    extractGenericImageFromHtml(html, sourceUrl)
+  );
+}
+
+async function resolveEventImageUrl(event: ArtEvent, htmlCache: Map<string, Promise<string>>) {
+  if (!event.sourceUrl || event.imageUrl) {
+    return event.imageUrl;
+  }
+
+  if (event.source === 'nationalgallery') {
+    const listUrl = 'https://nationalgallery.bg/exhibitions/';
+
+    if (event.sourceUrl === listUrl) {
+      const html = await fetchHtmlCached(listUrl, htmlCache);
+      return extractNationalGalleryListImage(html, event);
+    }
+
+    const html = await fetchHtmlCached(event.sourceUrl, htmlCache);
+    return extractNationalGalleryDetailImage(html, event.sourceUrl);
+  }
+
+  if (event.source === 'sghg') {
+    const listUrl = 'https://sghg.bg/en/%D0%BD%D0%B0%D1%81%D1%82%D0%BE%D1%8F%D1%89%D0%B8/';
+    const html = await fetchHtmlCached(listUrl, htmlCache);
+    return extractSghgListImage(html, event);
+  }
+
+  if (event.source === 'visitsofia') {
+    const html = await fetchHtmlCached(event.sourceUrl, htmlCache);
+    return extractVisitSofiaImage(html, event.sourceUrl);
+  }
+
+  if (event.source === 'icasofia') {
+    const html = await fetchHtmlCached(event.sourceUrl, htmlCache);
+    return extractIcaSofiaImage(html, event.sourceUrl);
+  }
+
+  const html = await fetchHtmlCached(event.sourceUrl, htmlCache);
+  return extractGenericImageFromHtml(html, event.sourceUrl);
+}
+
+async function enrichMissingEventImages(events: ArtEvent[]) {
+  const htmlCache = new Map<string, Promise<string>>();
+
+  return Promise.all(
+    events.map(async (event) => {
+      if (event.imageUrl) {
+        return event;
+      }
+
+      try {
+        const imageUrl = await resolveEventImageUrl(event, htmlCache);
+        return imageUrl ? { ...event, imageUrl } : event;
+      } catch (error) {
+        console.warn(`[${event.source}] image enrichment skipped for ${event.title}`, error);
+        return event;
+      }
+    }),
+  );
+}
+
 function extractJsonLdEvents(html: string, source: EventSource, listUrl: string) {
   const $ = load(html);
   const rawBlocks = $('script[type="application/ld+json"]')
@@ -820,10 +1167,12 @@ async function main() {
     return;
   }
 
-  const importedEventsWithStableTimestamps = preserveLastUpdated(existingEvents, importedEvents, refreshedAt);
-  const mergedEvents = dedupeEvents([...protectedEvents, ...importedEventsWithStableTimestamps]);
-  await fs.writeFile(eventsPath, `${JSON.stringify(mergedEvents, null, 2)}\n`, 'utf8');
-  console.log(`Wrote ${mergedEvents.length} Sofia events to public/data/events.json`);
+  const mergedEvents = dedupeEvents([...protectedEvents, ...importedEvents]);
+  const enrichedEvents = await enrichMissingEventImages(mergedEvents);
+  const finalEvents = preserveLastUpdated(existingEvents, enrichedEvents, refreshedAt);
+
+  await fs.writeFile(eventsPath, `${JSON.stringify(finalEvents, null, 2)}\n`, 'utf8');
+  console.log(`Wrote ${finalEvents.length} Sofia events to public/data/events.json`);
 }
 
 void main();
