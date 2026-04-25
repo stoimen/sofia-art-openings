@@ -18,6 +18,7 @@ function buildMapsUrl(event: DisplayEvent) {
 export function EventCard({ event, locationEnabled, onToggleFavorite }: EventCardProps) {
   const tagList = event.tags?.length ? event.tags : [event.eventType];
   const favoriteLabel = event.isFavorite ? 'Премахни от запазените' : 'Запази';
+  const imageAlt = event.artist ? `${event.title} от ${event.artist}` : event.title;
 
   return (
     <article className="event-card">
@@ -46,6 +47,12 @@ export function EventCard({ event, locationEnabled, onToggleFavorite }: EventCar
           </svg>
         </button>
       </div>
+
+      {event.imageUrl ? (
+        <div className="event-card-media">
+          <img className="event-card-image" src={event.imageUrl} alt={imageAlt} loading="lazy" decoding="async" />
+        </div>
+      ) : null}
 
       <div className="event-card-body">
         <div>
