@@ -37,6 +37,8 @@ Open the local Vite URL shown in the terminal.
 - `npm run build` type-checks and creates the production build
 - `npm run preview` serves the production build locally
 - `npm run lint` runs ESLint
+- `npm test` runs the Vitest unit suite
+- `npm run test:watch` runs Vitest in watch mode
 - `npm run import:events` runs the local importer and writes `public/data/events.json`
 - `npm run geocode:venues` geocodes missing venue coordinates and updates `public/data/venues.json`
 
@@ -164,7 +166,37 @@ Nearby ranking uses:
 2. distance from the user
 3. source reliability
 
-The default reliability weights can be adjusted in `src/api/events.ts`.
+When the same event appears in two sources, the more reliable source's record
+also wins as the canonical entry during deduplication (in `normalizeAndDeduplicateEvents`).
+
+### Reliability weights
+
+Lower numbers mean more reliable. The defaults live in `src/api/events.ts`:
+
+| Source           | Weight | Rationale                                                                 |
+| ---------------- | -----: | ------------------------------------------------------------------------- |
+| `nationalgallery` |     1 | Official institution, stable curated calendar.                            |
+| `sghg`            |     1 | Sofia City Art Gallery, official institutional calendar.                  |
+| `icasofia`        |     1 | ICA-Sofia, well-curated and consistently dated.                           |
+| `toplocentrala`   |     1 | Toplocentrala, stable visual-arts programme listing.                      |
+| `credobonum`      |     1 | Single venue with clean per-exhibition pages.                             |
+| `hostgallery`     |     1 | Single venue, hand-edited landing page.                                   |
+| `dechkouzunov`    |     1 | Dechko Uzunov gallery, institutional calendar.                            |
+| `visitsofia`      |     2 | Aggregator with broad coverage but weaker per-event metadata.             |
+| `programata`      |     3 | Generalist city listings; useful for discovery, noisier metadata.         |
+| `manual`          |     3 | Curated entries; intentionally low so any scraped institutional record wins on conflict. |
+
+Update the weights when a source's data quality changes — keep the table above in sync.
+
+## Test plan
+
+```bash
+npm test
+```
+
+Vitest covers the high-risk pure logic: date parsing/grouping, distance,
+`.ics` escaping, and the normalize-and-deduplicate pipeline. Tests run on
+every push and refresh through GitHub Actions.
 
 ## Scraping and legal note
 
