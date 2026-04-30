@@ -1,6 +1,7 @@
 import { startTransition, useDeferredValue, useEffect, useRef, useState } from 'react';
 import { loadEvents, sourceReliability } from './api/events';
 import { EmptyState } from './components/EmptyState';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { ErrorState } from './components/ErrorState';
 import { EventList } from './components/EventList';
 import { Filters, type FilterState } from './components/Filters';
@@ -348,15 +349,17 @@ export default function App() {
       ) : null}
 
       {!errorMessage && displayedEvents.length > 0 ? (
-        <EventList
-          events={displayedEvents}
-          locationEnabled={
-            locationState.status === 'granted' &&
-            locationState.latitude !== undefined &&
-            locationState.longitude !== undefined
-          }
-          onToggleFavorite={handleToggleFavorite}
-        />
+        <ErrorBoundary>
+          <EventList
+            events={displayedEvents}
+            locationEnabled={
+              locationState.status === 'granted' &&
+              locationState.latitude !== undefined &&
+              locationState.longitude !== undefined
+            }
+            onToggleFavorite={handleToggleFavorite}
+          />
+        </ErrorBoundary>
       ) : null}
     </Layout>
   );
