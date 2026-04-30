@@ -23,7 +23,7 @@ const eventsPath = path.join(projectRoot, 'public', 'data', 'events.json');
 
 const userAgent =
   process.env.IMPORT_USER_AGENT ??
-  'SofiaArtOpeningsImporter/0.1 (+https://github.com/replace-this/sofia-art-openings)';
+  'SofiaArtOpeningsImporter/0.1 (+https://github.com/stoimen/sofia-art-openings)';
 
 function normalizeText(value?: string | null) {
   return value?.replace(/\s+/g, ' ').trim() || undefined;
