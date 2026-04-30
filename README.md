@@ -141,7 +141,7 @@ The workflow file is at `.github/workflows/deploy.yml`.
 
 The repository also includes a scheduled refresh workflow at `.github/workflows/refresh-data.yml`.
 
-- It runs every day at `03:34 UTC`.
+- It runs every Monday at `03:34 UTC`.
 - It executes `npm run import:events`.
 - If `public/data/events.json` changed, it commits the refreshed file back to `main`.
 - It then builds and deploys the updated static site to GitHub Pages in the same workflow run.

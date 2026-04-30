@@ -2,7 +2,7 @@ name: Refresh Event Data
 
 on:
   schedule:
-    - cron: '34 03 * * *'
+    - cron: '34 03 * * 1'
   workflow_dispatch:
 
 permissions:
