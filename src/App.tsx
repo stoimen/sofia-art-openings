@@ -4,6 +4,7 @@ import { EmptyState } from './components/EmptyState';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { ErrorState } from './components/ErrorState';
 import { EventList } from './components/EventList';
+import { EventListSkeleton } from './components/EventListSkeleton';
 import { Filters, type FilterState } from './components/Filters';
 import { Layout } from './components/Layout';
 import { LocationPermission } from './components/LocationPermission';
@@ -77,6 +78,9 @@ export default function App() {
   const [filters, setFilters] = useState<FilterState>(defaultFilters);
   const [favoriteIds, setFavoriteIds] = useState<string[]>(readFavoriteIds);
   const [locationState, setLocationState] = useState<LocationState>({ status: 'idle' });
+  const [isOnline, setIsOnline] = useState(() =>
+    typeof navigator === 'undefined' ? true : navigator.onLine,
+  );
   const autoLocationAttemptedRef = useRef(false);
   const locationRequestInFlightRef = useRef(false);
 
@@ -168,6 +172,22 @@ export default function App() {
   useEffect(() => {
     window.localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(favoriteIds));
   }, [favoriteIds]);
+
+  useEffect(() => {
+    function handleOnline() {
+      setIsOnline(true);
+    }
+    function handleOffline() {
+      setIsOnline(false);
+    }
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, []);
 
   function requestLocation(mode: 'auto' | 'manual' = 'manual') {
     if (!('geolocation' in navigator)) {
@@ -335,12 +355,13 @@ export default function App() {
         onReset={() => setFilters(defaultFilters)}
       />
 
-      {loading && events.length === 0 ? (
-        <section className="state-panel" aria-live="polite">
-          <h2>Зареждане на събития</h2>
-          <p>Четене на последния статичен набор от данни от <code>/data/events.json</code>.</p>
-        </section>
+      {!isOnline && events.length > 0 ? (
+        <p className="offline-banner" role="status">
+          Офлайн режим — показваме последните кеширани събития.
+        </p>
       ) : null}
+
+      {loading && events.length === 0 ? <EventListSkeleton /> : null}
 
       {errorMessage ? <ErrorState message={errorMessage} onRetry={handleRefresh} /> : null}
 

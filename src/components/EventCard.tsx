@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { DisplayEvent } from '../types';
 import { sourceLabels } from '../api/events';
 import { formatDistance } from '../utils/distance';
@@ -16,9 +17,11 @@ function buildMapsUrl(event: DisplayEvent) {
 }
 
 export function EventCard({ event, locationEnabled, onToggleFavorite }: EventCardProps) {
+  const [imageFailed, setImageFailed] = useState(false);
   const tagList = event.tags?.length ? event.tags : [event.eventType];
   const favoriteLabel = event.isFavorite ? 'Премахни от запазените' : 'Запази';
   const imageAlt = event.artist ? `${event.title} от ${event.artist}` : event.title;
+  const showImage = Boolean(event.imageUrl) && !imageFailed;
 
   return (
     <article className="event-card">
@@ -48,9 +51,16 @@ export function EventCard({ event, locationEnabled, onToggleFavorite }: EventCar
         </button>
       </div>
 
-      {event.imageUrl ? (
+      {showImage ? (
         <div className="event-card-media">
-          <img className="event-card-image" src={event.imageUrl} alt={imageAlt} loading="lazy" decoding="async" />
+          <img
+            className="event-card-image"
+            src={event.imageUrl}
+            alt={imageAlt}
+            loading="lazy"
+            decoding="async"
+            onError={() => setImageFailed(true)}
+          />
         </div>
       ) : null}
 

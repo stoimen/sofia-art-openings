@@ -486,6 +486,89 @@ button {
   }
 }
 
+.event-card-skeleton {
+  display: grid;
+  gap: 14px;
+}
+
+.skeleton-shimmer {
+  position: relative;
+  overflow: hidden;
+  background: rgba(17, 24, 39, 0.08);
+  border-radius: 12px;
+}
+
+.skeleton-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%);
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+.skeleton-tag-row {
+  height: 28px;
+  width: 60%;
+  border-radius: 999px;
+}
+
+.skeleton-media {
+  height: 220px;
+  border-radius: 20px;
+}
+
+.skeleton-title {
+  height: 28px;
+  width: 80%;
+}
+
+.skeleton-line {
+  height: 14px;
+}
+
+.skeleton-line.short {
+  width: 50%;
+}
+
+@keyframes skeleton-shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.offline-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  margin: 12px 0 0;
+  border-radius: 14px;
+  background: rgba(249, 115, 22, 0.12);
+  color: #8a3c02;
+  font-size: 0.92rem;
+}
+
+.offline-banner::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #b45309;
+}
+
+@media (min-width: 720px) {
+  .skeleton-media {
+    height: 240px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -494,5 +577,9 @@ button {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .skeleton-shimmer::after {
+    animation: none;
   }
 }
