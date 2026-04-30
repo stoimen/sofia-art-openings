@@ -12,7 +12,9 @@
     "preview": "vite preview",
     "import:events": "node --experimental-strip-types scripts/import-events.ts",
     "geocode:venues": "node --experimental-strip-types scripts/geocode-venues.ts",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -31,6 +33,7 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.29.1",
     "vite": "^5.4.19",
-    "vite-plugin-pwa": "^0.20.5"
+    "vite-plugin-pwa": "^0.20.5",
+    "vitest": "^4.1.5"
   }
 }
