@@ -9,7 +9,7 @@ import { Layout } from './components/Layout';
 import { LocationPermission } from './components/LocationPermission';
 import type { ArtEvent, DisplayEvent, LocationPermissionStatus } from './types';
 import { haversineDistanceKm } from './utils/distance';
-import { getEventAnchorDate, isFutureStartEvent, matchesTimeframe, isUpcomingEvent } from './utils/date';
+import { getEventAnchorTime, isFutureStartEvent, matchesTimeframe, isUpcomingEvent } from './utils/date';
 
 const FAVORITES_STORAGE_KEY = 'sofia-art-openings:favorites';
 
@@ -50,7 +50,7 @@ function hasCoordinates(event: ArtEvent): event is ArtEvent & { latitude: number
 
 function compareByDate(left: DisplayEvent, right: DisplayEvent) {
   return (
-    getEventAnchorDate(left).getTime() - getEventAnchorDate(right).getTime() ||
+    getEventAnchorTime(left) - getEventAnchorTime(right) ||
     sourceReliability[left.source] - sourceReliability[right.source] ||
     left.title.localeCompare(right.title)
   );
@@ -61,7 +61,7 @@ function compareByNearbyScore(left: DisplayEvent, right: DisplayEvent) {
   const rightDistance = right.distanceKm ?? Number.POSITIVE_INFINITY;
 
   return (
-    getEventAnchorDate(left).getTime() - getEventAnchorDate(right).getTime() ||
+    getEventAnchorTime(left) - getEventAnchorTime(right) ||
     leftDistance - rightDistance ||
     sourceReliability[left.source] - sourceReliability[right.source] ||
     left.title.localeCompare(right.title)

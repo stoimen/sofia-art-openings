@@ -50,15 +50,17 @@ export function parseDateValue(value?: string, endOfDay = false) {
   return parsed;
 }
 
-export function getEventAnchorDate(event: ArtEvent) {
+export function getEventAnchorDate(event: ArtEvent): Date | undefined {
   return (
     parseDateValue(event.openingStart) ??
     parseDateValue(event.exhibitionStart) ??
     parseDateValue(event.openingEnd) ??
-    parseDateValue(event.exhibitionEnd, true) ??
-    parseDateValue(event.lastUpdated) ??
-    new Date()
+    parseDateValue(event.exhibitionEnd, true)
   );
+}
+
+export function getEventAnchorTime(event: ArtEvent) {
+  return getEventAnchorDate(event)?.getTime() ?? Number.POSITIVE_INFINITY;
 }
 
 export function getEventEndDate(event: ArtEvent) {
@@ -120,7 +122,7 @@ export function formatGroupingLabel(dateKey: string) {
 
 export function getGroupingKey(event: ArtEvent) {
   const anchorDate = getEventAnchorDate(event);
-  return formatLocalDateKey(anchorDate);
+  return anchorDate ? formatLocalDateKey(anchorDate) : 'undated';
 }
 
 export function isUpcomingEvent(event: ArtEvent, now = new Date()) {
@@ -133,11 +135,17 @@ export function isUpcomingEvent(event: ArtEvent, now = new Date()) {
   }
 
   const anchorDate = getEventAnchorDate(event);
+  if (!anchorDate) {
+    return true;
+  }
   return anchorDate.getTime() >= today.getTime();
 }
 
 export function isFutureStartEvent(event: ArtEvent, now = new Date()) {
   const anchorDate = getEventAnchorDate(event);
+  if (!anchorDate) {
+    return false;
+  }
   const today = new Date(now);
   today.setHours(0, 0, 0, 0);
   return anchorDate.getTime() >= today.getTime();
@@ -156,6 +164,9 @@ export function matchesTimeframe(event: ArtEvent, timeframe: TimeframeFilter, no
   }
 
   const anchorDate = getEventAnchorDate(event);
+  if (!anchorDate) {
+    return false;
+  }
   const startToday = createDayBoundary(now, 0);
   const startTomorrow = createDayBoundary(now, 1);
   const startDayAfterTomorrow = createDayBoundary(now, 2);
