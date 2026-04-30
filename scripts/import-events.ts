@@ -1145,6 +1145,55 @@ const importers: SourceImporter[] = [
   createProgramataImporter(),
 ];
 
+const minTotalRetentionRatio = 0.7;
+
+function countBySource(events: ArtEvent[]) {
+  const counts = new Map<EventSource, number>();
+  for (const event of events) {
+    counts.set(event.source, (counts.get(event.source) ?? 0) + 1);
+  }
+  return counts;
+}
+
+type ImportValidationResult = {
+  ok: boolean;
+  reasons: string[];
+};
+
+function validateImportQuality(
+  existingEvents: ArtEvent[],
+  finalEvents: ArtEvent[],
+  refreshedSources: Set<EventSource>,
+): ImportValidationResult {
+  const reasons: string[] = [];
+  const existingCounts = countBySource(existingEvents);
+  const finalCounts = countBySource(finalEvents);
+
+  console.log('Per-source event counts (existing → final):');
+  const allSources = new Set<EventSource>([...existingCounts.keys(), ...finalCounts.keys()]);
+  for (const source of allSources) {
+    const before = existingCounts.get(source) ?? 0;
+    const after = finalCounts.get(source) ?? 0;
+    const flag = refreshedSources.has(source) && before > 0 && after === 0 ? ' ⚠ dropped to zero' : '';
+    console.log(`  - ${source}: ${before} → ${after}${flag}`);
+
+    if (refreshedSources.has(source) && before > 0 && after === 0) {
+      reasons.push(`source "${source}" went from ${before} events to 0`);
+    }
+  }
+
+  if (existingEvents.length > 0) {
+    const ratio = finalEvents.length / existingEvents.length;
+    if (ratio < minTotalRetentionRatio) {
+      reasons.push(
+        `total event count dropped from ${existingEvents.length} to ${finalEvents.length} (${(ratio * 100).toFixed(0)}% retained, threshold ${(minTotalRetentionRatio * 100).toFixed(0)}%)`,
+      );
+    }
+  }
+
+  return { ok: reasons.length === 0, reasons };
+}
+
 async function main() {
   const existingEvents = await readExistingEvents();
   const refreshedSources = new Set<EventSource>(['credobonum', 'hostgallery', 'dechkouzunov', 'programata']);
@@ -1170,6 +1219,21 @@ async function main() {
   const mergedEvents = dedupeEvents([...protectedEvents, ...importedEvents]);
   const enrichedEvents = await enrichMissingEventImages(mergedEvents);
   const finalEvents = preserveLastUpdated(existingEvents, enrichedEvents, refreshedAt);
+
+  const validation = validateImportQuality(existingEvents, finalEvents, refreshedSources);
+  if (!validation.ok) {
+    console.error('Import validation failed:');
+    for (const reason of validation.reasons) {
+      console.error(`  - ${reason}`);
+    }
+    if (process.env.IMPORT_FORCE === '1') {
+      console.warn('IMPORT_FORCE=1 set — writing anyway.');
+    } else {
+      console.error('Refusing to overwrite public/data/events.json. Set IMPORT_FORCE=1 to override.');
+      process.exitCode = 1;
+      return;
+    }
+  }
 
   await fs.writeFile(eventsPath, `${JSON.stringify(finalEvents, null, 2)}\n`, 'utf8');
   console.log(`Wrote ${finalEvents.length} Sofia events to public/data/events.json`);
