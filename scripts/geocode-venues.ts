@@ -20,7 +20,7 @@ const venuesPath = path.join(projectRoot, 'public', 'data', 'venues.json');
 
 const userAgent =
   process.env.GEOCODER_USER_AGENT ??
-  'SofiaArtOpeningsGeocoder/0.1 (+https://github.com/replace-this/sofia-art-openings)';
+  'SofiaArtOpeningsGeocoder/0.1 (+https://github.com/stoimen/sofia-art-openings)';
 
 function normalizeKey(address: string) {
   return address.trim().toLowerCase();
