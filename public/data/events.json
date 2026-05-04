@@ -196,19 +196,6 @@
     "imageUrl": "https://sghg.bg/wp-content/uploads/2026/03/5.jpg"
   },
   {
-    "id": "programata-4-hands-mirror-a4e06fa059",
-    "title": "4 hands | mirror | Аксел Морел и други артисти",
-    "artist": "mirror | Аксел Морел и други артисти",
-    "venue": "Little Bird Place",
-    "exhibitionStart": "2026-04-02",
-    "exhibitionEnd": "2026-05-02",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/4-hands-mirror-aksel-morel-i-drugi/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/d1de250d-a911-21a8-8fc5-1ba9c9384822-scaled.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
     "id": "programata--84c357c9aa",
     "title": "Криста Сомерер и Лоран Миньоно | Галерия Автоматик",
     "artist": "Галерия Автоматик",
@@ -219,19 +206,6 @@
     "source": "programata",
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/krista-somerer-i-loran-minono-galeriya-avtomatik/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/ag-april-event-2026-cover-02.png",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
-    "id": "programata-garbage-pail-kido-81846c3a14",
-    "title": "Garbage Pail Kido | Кокимото",
-    "artist": "Кокимото",
-    "venue": "Cryptid Art Space",
-    "exhibitionStart": "2026-04-06",
-    "exhibitionEnd": "2026-04-30",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/garbage-pail-kido-kokimoto/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/03/kokimoto-gpk-cryptid-art-space.jpg",
     "lastUpdated": "2026-04-25T06:19:25.687Z"
   },
   {
@@ -259,31 +233,6 @@
     "source": "programata",
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/alternative-in-the-line-of-utopia/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/e39279_f0b17dce1ea64f42876bac2481fad517mv2.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
-    "id": "programata--dee8276b18",
-    "title": "Жорж Папазов и Стокхолм",
-    "venue": "Съюз на българските художници Шипка 6",
-    "exhibitionStart": "2026-04-14",
-    "exhibitionEnd": "2026-05-02",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/zhorzh-papazov-i-stokholm/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/web_poster_small.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
-    "id": "programata--d3f36618ba",
-    "title": "Нарове и птици | Нова изложба от серията Майстори на реализма",
-    "artist": "Нова изложба от серията Майстори на реализма",
-    "venue": "Париж",
-    "exhibitionStart": "2026-04-14",
-    "exhibitionEnd": "2026-05-02",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/narove-i-pticzi-nova-izlozhba-ot-seriyata-majstori-na-realizma/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/1.-narove-i-ptitsi-poster_web.jpg",
     "lastUpdated": "2026-04-25T06:19:25.687Z"
   },
   {
@@ -431,19 +380,6 @@
     "source": "programata",
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/need-some-space-mariya-labudovich-pantelich/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/simbiosis.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
-    "id": "programata-beca-7632548e42",
-    "title": "Смъртта на егото | Велко Велков и BECA",
-    "artist": "Велко Велков и BECA",
-    "venue": "BECA Before Creating Academy",
-    "exhibitionStart": "2026-04-25",
-    "exhibitionEnd": "2026-05-01",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/smartta-na-egoto-velko-velkov-i-beca/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/ego-death-1-scaled.jpg",
     "lastUpdated": "2026-04-25T06:19:25.687Z"
   },
   {
