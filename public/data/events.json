@@ -42,19 +42,6 @@
     "imageUrl": "https://nationalgallery.bg/wp-content/uploads/2026/01/5-%D0%A2%D0%9E%D0%A0%D0%A1-2024.jpg"
   },
   {
-    "id": "dechkouzunov-heritage-programme-dechko-uzunov-cosmos-591f477c2a",
-    "title": "HERITAGE PROGRAMME. DECHKO UZUNOV. COSMOS",
-    "venue": "Atelier Dechko Uzunov",
-    "address": "24 Dragan Tsankov Blvd., Izgrev, 1113 Sofia, Bulgaria",
-    "exhibitionStart": "2026-02-24",
-    "exhibitionEnd": "2026-05-24",
-    "eventType": "exhibition",
-    "source": "dechkouzunov",
-    "sourceUrl": "https://dug.sghg.bg/en/",
-    "imageUrl": "https://dug.sghg.bg/wp-content/uploads/2026/02/DU_Kosmos_1.jpg",
-    "lastUpdated": "2026-04-24T16:30:10.113Z"
-  },
-  {
     "id": "nationalgallery-elena-karamihaylova-and-i-painted-on-alone",
     "title": "Elena Karamihaylova (1875–1961): …And I Painted on Alone",
     "artist": "Elena Karamihaylova",
@@ -120,19 +107,6 @@
     "imageUrl": "https://visitsofia.bg/images/jevents/635x410/orig_69a818a29f1016.00288739.png"
   },
   {
-    "id": "programata--a32e3a9d94",
-    "title": "Лунатично | Николай Панайотов",
-    "artist": "Николай Панайотов",
-    "venue": "Национална галерия Квадрат 500",
-    "exhibitionStart": "2026-03-05",
-    "exhibitionEnd": "2026-05-31",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/lunatichno-nikolaj-panajotov/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/03/online_invitation.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
     "id": "nationalgallery-lunatically-nicolai-panayotov",
     "title": "LUNATICALLY Nicolai Panayotov",
     "artist": "Nicolai Panayotov",
@@ -196,46 +170,6 @@
     "imageUrl": "https://sghg.bg/wp-content/uploads/2026/03/5.jpg"
   },
   {
-    "id": "programata--84c357c9aa",
-    "title": "Криста Сомерер и Лоран Миньоно | Галерия Автоматик",
-    "artist": "Галерия Автоматик",
-    "venue": "Галерия АВТОМАТИК",
-    "exhibitionStart": "2026-04-02",
-    "exhibitionEnd": "2026-05-17",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/krista-somerer-i-loran-minono-galeriya-avtomatik/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/ag-april-event-2026-cover-02.png",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
-    "id": "credobonum-arid-dimitar-solakov-cc6dd79277",
-    "title": "ARID – Dimitar Solakov",
-    "artist": "Dimitar Solakov",
-    "venue": "Credo Bonum Gallery",
-    "address": "2 Slavyanska St., entrance from Benkovski St., 1000 Sofia, Bulgaria",
-    "exhibitionStart": "2026-04-08",
-    "exhibitionEnd": "2026-05-08",
-    "eventType": "exhibition",
-    "source": "credobonum",
-    "sourceUrl": "https://credobonum.bg/en/arid-dimitar-solakov/",
-    "description": "Credo Bonum Foundation and Gallery presents: ARID An exhibition by Dimitar Solakov Opening: April 8, 6:00 PM Exhibition dates: April 8 – May 8, 2026 Credo Bonum Gallery, 2 Slavyanska St., entrance from Benkovski St.",
-    "imageUrl": "https://credobonum.bg/en/wp-content/uploads/sites/3/2026/04/dimisolakov-sait-eng-780x520.png",
-    "lastUpdated": "2026-04-24T16:30:07.121Z"
-  },
-  {
-    "id": "programata-alternative-in-the-line-of-utopia-8302a19be2",
-    "title": "Alternative… in the Line of Utopia",
-    "venue": "ONE Gallery",
-    "exhibitionStart": "2026-04-14",
-    "exhibitionEnd": "2026-05-14",
-    "eventType": "exhibition",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/alternative-in-the-line-of-utopia/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/e39279_f0b17dce1ea64f42876bac2481fad517mv2.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
     "id": "nationalgallery-anthony-georgieff-shared-memory",
     "title": "Anthony Georgieff: Shared Memory: Jewish Presence Across the Bulgarian Lands",
     "artist": "Anthony Georgieff",
@@ -255,46 +189,6 @@
     ],
     "lastUpdated": "2026-04-25T06:19:25.687Z",
     "imageUrl": "https://nationalgallery.bg/wp-content/uploads/2026/04/3-2crop.jpg"
-  },
-  {
-    "id": "hostgallery-the-illusion-of-meaning-ba607250b8",
-    "title": "The Illusion of Meaning",
-    "artist": "Svilen Nachev",
-    "venue": "HOSTGALLERY",
-    "address": "102 Acad. Ivan Evstratiev Geshov Blvd., inner entrance, 1612 Sofia, Bulgaria",
-    "exhibitionStart": "2026-04-16",
-    "exhibitionEnd": "2026-05-16",
-    "eventType": "exhibition",
-    "source": "hostgallery",
-    "sourceUrl": "https://host.gallery/",
-    "description": "Opening and artist talk:16 April, 6 pm",
-    "imageUrl": "https://host.gallery/wp-content/uploads/2023/08/HOSTGALLERY-Cover-1200x630-1.png",
-    "lastUpdated": "2026-04-24T16:30:09.295Z"
-  },
-  {
-    "id": "programata-george-shopkin-397dab5d2a",
-    "title": "Георги Алайков / George Shopkin",
-    "venue": "Съюз на българските художници Райко Алексиев",
-    "exhibitionStart": "2026-04-16",
-    "exhibitionEnd": "2026-05-05",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/georgi-alajkov-george-shopkin/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/img_6506.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
-    "id": "programata--8974698efc",
-    "title": "Гранично състояние: Не-сън | Анжела Терзиева",
-    "artist": "Анжела Терзиева",
-    "venue": "Ракурси",
-    "exhibitionStart": "2026-04-16",
-    "exhibitionEnd": "2026-05-05",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/granichno-sastoyanie-ne-san-anzhela-terzieva/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/3.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
   },
   {
     "id": "visitsofia-georgi-alaykov-george-shopkin",
@@ -319,70 +213,6 @@
     "imageUrl": "https://visitsofia.bg/images/jevents/635x410/orig_69e76924259c14.35912029.jpeg"
   },
   {
-    "id": "programata-2026-0e62b107e4",
-    "title": "Галерии. Колекции. Творби / 2026",
-    "venue": "Съюз на българските художници Шипка 6",
-    "exhibitionStart": "2026-04-20",
-    "exhibitionEnd": "2026-05-27",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/galerii-kolekczii-tvorbi-2026/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/gallery-poster-sbh-120x180-cm_2026_v2-1.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
-    "id": "programata-nooitvolmaakt-04458c609b",
-    "title": "Никога съвършено / NooitVolmaakt | Гергана Николова",
-    "artist": "Гергана Николова",
-    "venue": "Галерия-книжарница София Прес",
-    "exhibitionStart": "2026-04-20",
-    "exhibitionEnd": "2026-05-08",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/nikoga-savarsheno-nooitvolmaakt-gergana-nikolova/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/666083065_10230549980364991_1190303280119814687_n.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
-    "id": "programata-paranoid-2d50017882",
-    "title": "PARANOID | Стефан Петрунов",
-    "artist": "Стефан Петрунов",
-    "venue": "Аросита",
-    "exhibitionStart": "2026-04-22",
-    "exhibitionEnd": "2026-05-08",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/paranoid-stefan-petrunov/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/stefan-petrunov.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
-    "id": "programata-359-4265702f29",
-    "title": "Пред огледалото | Галерия +359",
-    "artist": "Галерия +359",
-    "venue": "Галерия +359",
-    "exhibitionStart": "2026-04-23",
-    "exhibitionEnd": "2026-05-27",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/pred-ogledaloto-galeriya-359/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/before-the-mirror-gallery-website-desktop.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
-    "id": "programata-need-some-space-6a020703c5",
-    "title": "Need Some Space | Мария Лабудович Пантелич",
-    "artist": "Мария Лабудович Пантелич",
-    "venue": "Depoo",
-    "exhibitionStart": "2026-04-24",
-    "exhibitionEnd": "2026-05-09",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/need-some-space-mariya-labudovich-pantelich/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/04/simbiosis.jpg",
-    "lastUpdated": "2026-04-25T06:19:25.687Z"
-  },
-  {
     "id": "nationalgallery-lika-yanko-journey-to-the-image",
     "title": "Lika Yanko: Journey to the Image",
     "artist": "Lika Yanko",
@@ -405,6 +235,18 @@
     "imageUrl": "https://nationalgallery.bg/wp-content/uploads/2026/04/1-1-e1776925409256.jpg"
   },
   {
+    "id": "programata-5-5-art-fashion-d6b8ae4c3d",
+    "title": "5+5 / art+fashion",
+    "venue": "Софийски арсенал - Музей за съвременно изкуство",
+    "exhibitionStart": "2026-04-30",
+    "exhibitionEnd": "2026-06-26",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/5-5-art-fashion/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/artfashion_pokana.jpg",
+    "lastUpdated": "2026-06-01T15:15:57.627Z"
+  },
+  {
     "id": "nationalgallery-giro-ditalia-riding-towards-the-future",
     "title": "GIRO D’ITALIA. Riding towards the Future",
     "venue": "Kvadrat 500",
@@ -423,5 +265,96 @@
     ],
     "lastUpdated": "2026-04-25T06:19:25.687Z",
     "imageUrl": "https://nationalgallery.bg/wp-content/uploads/2026/04/IMG_4961.jpg"
+  },
+  {
+    "id": "programata--b6b20cd909",
+    "title": "Джиро Д’Италия | Кратка история на Италия на две колела",
+    "artist": "Кратка история на Италия на две колела",
+    "venue": "Национална галерия Квадрат 500",
+    "exhibitionStart": "2026-05-05",
+    "exhibitionEnd": "2026-07-05",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/dzhiro-ditaliya-kratka-istoriya-na-italiya-na-dve-kolela/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/screenshot-2026-05-04-205153.png",
+    "lastUpdated": "2026-06-01T15:15:57.627Z"
+  },
+  {
+    "id": "programata-phase-boundary-18d3ed124d",
+    "title": "Phase Boundary | Стела Василева",
+    "artist": "Стела Василева",
+    "venue": "Little Bird Place",
+    "exhibitionStart": "2026-05-12",
+    "exhibitionEnd": "2026-06-06",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/phase-boundary-stela-vasileva/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/12faad7a-200c-8d24-8e68-fec6b1800bc5-scaled.jpg",
+    "lastUpdated": "2026-06-01T15:15:57.627Z"
+  },
+  {
+    "id": "programata--80d2a3399f",
+    "title": "Лица | Групова изложба",
+    "artist": "Групова изложба",
+    "venue": "ONE Gallery",
+    "exhibitionStart": "2026-05-18",
+    "exhibitionEnd": "2026-05-31",
+    "eventType": "exhibition",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/licza-grupova-izlozhba/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/faces_original_style_upscaled_3x.png",
+    "lastUpdated": "2026-06-01T15:15:57.627Z"
+  },
+  {
+    "id": "programata--af74c73913",
+    "title": "Нищо по-малко от любов | Юли Шумарев",
+    "artist": "Юли Шумарев",
+    "venue": "Париж",
+    "exhibitionStart": "2026-05-20",
+    "exhibitionEnd": "2026-06-06",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/nistho-po-malko-ot-lyubov-yuli-shumarev/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/3.-yuli-shumarev-bregove-na-lyubovta-27x70cm.jpg",
+    "lastUpdated": "2026-06-01T15:15:57.627Z"
+  },
+  {
+    "id": "programata--b2b5c76692",
+    "title": "Нощта на времето | Радостин Седевчев",
+    "artist": "Радостин Седевчев",
+    "venue": "Институт за съвременно изкуство София",
+    "exhibitionStart": "2026-05-21",
+    "exhibitionEnd": "2026-06-27",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/nosthta-na-vremeto-radostin-sedevchev/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/ca17e47d-b171-b40d-ac31-32578ba64489.jpg",
+    "lastUpdated": "2026-06-01T15:15:57.627Z"
+  },
+  {
+    "id": "programata--608635d598",
+    "title": "И безвремието е време | Силвия Богоева",
+    "artist": "Силвия Богоева",
+    "venue": "Нюанс",
+    "exhibitionStart": "2026-05-26",
+    "exhibitionEnd": "2026-06-14",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/i-bezvremieto-e-vreme-silviya-bogoeva/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/screenshot_2026_05_19_at_143408.jpg",
+    "lastUpdated": "2026-06-01T15:15:57.627Z"
+  },
+  {
+    "id": "programata--c8bfad2a79",
+    "title": "Прелистени страници | Алекси Начев",
+    "artist": "Алекси Начев",
+    "venue": "Галерия Академия",
+    "exhibitionStart": "2026-06-02",
+    "exhibitionEnd": "2026-06-21",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/prelisteni-straniczi-aleksi-nachev/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/pokana_email_alexi_nachev_bg.jpg",
+    "lastUpdated": "2026-06-01T15:15:57.627Z"
   }
 ]

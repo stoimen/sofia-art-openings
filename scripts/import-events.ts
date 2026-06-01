@@ -1164,12 +1164,15 @@ function validateImportQuality(
   existingEvents: ArtEvent[],
   finalEvents: ArtEvent[],
   refreshedSources: Set<EventSource>,
+  now = new Date(),
 ): ImportValidationResult {
   const reasons: string[] = [];
-  const existingCounts = countBySource(existingEvents);
-  const finalCounts = countBySource(finalEvents);
+  const existingCurrentEvents = existingEvents.filter((event) => isCurrentOrUpcomingEvent(event, now));
+  const finalCurrentEvents = finalEvents.filter((event) => isCurrentOrUpcomingEvent(event, now));
+  const existingCounts = countBySource(existingCurrentEvents);
+  const finalCounts = countBySource(finalCurrentEvents);
 
-  console.log('Per-source event counts (existing → final):');
+  console.log('Per-source current or upcoming event counts (existing → final):');
   const allSources = new Set<EventSource>([...existingCounts.keys(), ...finalCounts.keys()]);
   for (const source of allSources) {
     const before = existingCounts.get(source) ?? 0;
@@ -1182,11 +1185,11 @@ function validateImportQuality(
     }
   }
 
-  if (existingEvents.length > 0) {
-    const ratio = finalEvents.length / existingEvents.length;
+  if (existingCurrentEvents.length > 0) {
+    const ratio = finalCurrentEvents.length / existingCurrentEvents.length;
     if (ratio < minTotalRetentionRatio) {
       reasons.push(
-        `total event count dropped from ${existingEvents.length} to ${finalEvents.length} (${(ratio * 100).toFixed(0)}% retained, threshold ${(minTotalRetentionRatio * 100).toFixed(0)}%)`,
+        `total current or upcoming event count dropped from ${existingCurrentEvents.length} to ${finalCurrentEvents.length} (${(ratio * 100).toFixed(0)}% retained, threshold ${(minTotalRetentionRatio * 100).toFixed(0)}%)`,
       );
     }
   }
