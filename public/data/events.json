@@ -280,45 +280,6 @@
     "lastUpdated": "2026-06-01T15:15:57.627Z"
   },
   {
-    "id": "programata-phase-boundary-18d3ed124d",
-    "title": "Phase Boundary | Стела Василева",
-    "artist": "Стела Василева",
-    "venue": "Little Bird Place",
-    "exhibitionStart": "2026-05-12",
-    "exhibitionEnd": "2026-06-06",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/phase-boundary-stela-vasileva/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/12faad7a-200c-8d24-8e68-fec6b1800bc5-scaled.jpg",
-    "lastUpdated": "2026-06-01T15:15:57.627Z"
-  },
-  {
-    "id": "programata--80d2a3399f",
-    "title": "Лица | Групова изложба",
-    "artist": "Групова изложба",
-    "venue": "ONE Gallery",
-    "exhibitionStart": "2026-05-18",
-    "exhibitionEnd": "2026-05-31",
-    "eventType": "exhibition",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/licza-grupova-izlozhba/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/faces_original_style_upscaled_3x.png",
-    "lastUpdated": "2026-06-01T15:15:57.627Z"
-  },
-  {
-    "id": "programata--af74c73913",
-    "title": "Нищо по-малко от любов | Юли Шумарев",
-    "artist": "Юли Шумарев",
-    "venue": "Париж",
-    "exhibitionStart": "2026-05-20",
-    "exhibitionEnd": "2026-06-06",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/nistho-po-malko-ot-lyubov-yuli-shumarev/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/3.-yuli-shumarev-bregove-na-lyubovta-27x70cm.jpg",
-    "lastUpdated": "2026-06-01T15:15:57.627Z"
-  },
-  {
     "id": "programata--b2b5c76692",
     "title": "Нощта на времето | Радостин Седевчев",
     "artist": "Радостин Седевчев",
@@ -345,6 +306,32 @@
     "lastUpdated": "2026-06-01T15:15:57.627Z"
   },
   {
+    "id": "dechkouzunov-atanas-patsev-portraits-and-self-portraits-100-years-since-the-artist-s-birth-a95b760c12",
+    "title": "ATANAS PATSEV. PORTRAITS AND SELF-PORTRAITS 100 Years Since the Artist’s Birth",
+    "venue": "ATANAS PATSEV | PORTRAITS AND SELF-PORTRAITS",
+    "address": "24 Dragan Tsankov Blvd., Izgrev, 1113 Sofia, Bulgaria",
+    "exhibitionStart": "2026-06-02",
+    "exhibitionEnd": "2026-09-27",
+    "eventType": "exhibition",
+    "source": "dechkouzunov",
+    "sourceUrl": "https://dug.sghg.bg/en/",
+    "imageUrl": "https://dug.sghg.bg/wp-content/uploads/2026/05/01.jpg",
+    "lastUpdated": "2026-06-08T08:29:09.516Z"
+  },
+  {
+    "id": "programata-images-of-soul-evolving-in-light-jennifer-pyron-3c07f84f87",
+    "title": "Images of Soul: Evolving in Light | Jennifer Pyron",
+    "artist": "Jennifer Pyron",
+    "venue": "Аросита",
+    "exhibitionStart": "2026-06-02",
+    "exhibitionEnd": "2026-06-16",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/images-of-soul-evolving-in-light-jennifer-pyron/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/fb-scaled.jpg",
+    "lastUpdated": "2026-06-08T08:29:09.516Z"
+  },
+  {
     "id": "programata--c8bfad2a79",
     "title": "Прелистени страници | Алекси Начев",
     "artist": "Алекси Начев",
@@ -356,5 +343,44 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/prelisteni-straniczi-aleksi-nachev/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/pokana_email_alexi_nachev_bg.jpg",
     "lastUpdated": "2026-06-01T15:15:57.627Z"
+  },
+  {
+    "id": "programata--f3e98b1bc0",
+    "title": "Метаморфози | Карина Добрева и Кая Ценкуловска",
+    "artist": "Карина Добрева и Кая Ценкуловска",
+    "venue": "Credo Bonum",
+    "exhibitionStart": "2026-06-04",
+    "exhibitionEnd": "2026-07-04",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/metamorfozi-karina-dobreva-i-kaya-czenkulovska/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/2mqnmpcincy3lmkxghhhjoamtkvxpba8ennosygh.jpg",
+    "lastUpdated": "2026-06-08T08:29:09.516Z"
+  },
+  {
+    "id": "programata--134902f316",
+    "title": "Отвъд повърхността | Елена Павлова",
+    "artist": "Елена Павлова",
+    "venue": "Vivacom Art Hall",
+    "exhibitionStart": "2026-06-09",
+    "exhibitionEnd": "2026-06-20",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/otvad-povarhnostta-elena-pavlova/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/otvad-povarhnostta.jpg",
+    "lastUpdated": "2026-06-08T08:29:09.516Z"
+  },
+  {
+    "id": "programata--e27d2d8e36",
+    "title": "Копнежи | Нели Пиперова и Жени Кирилова",
+    "artist": "Нели Пиперова и Жени Кирилова",
+    "venue": "ONE Gallery",
+    "exhibitionStart": "2026-06-16",
+    "exhibitionEnd": "2026-06-30",
+    "eventType": "exhibition",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/kopnezhi-neli-piperova-i-zheni-kirilova/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/plakat-final.png",
+    "lastUpdated": "2026-06-08T08:29:09.516Z"
   }
 ]
