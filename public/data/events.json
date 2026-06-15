@@ -293,19 +293,6 @@
     "lastUpdated": "2026-06-01T15:15:57.627Z"
   },
   {
-    "id": "programata--608635d598",
-    "title": "И безвремието е време | Силвия Богоева",
-    "artist": "Силвия Богоева",
-    "venue": "Нюанс",
-    "exhibitionStart": "2026-05-26",
-    "exhibitionEnd": "2026-06-14",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/i-bezvremieto-e-vreme-silviya-bogoeva/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/screenshot_2026_05_19_at_143408.jpg",
-    "lastUpdated": "2026-06-01T15:15:57.627Z"
-  },
-  {
     "id": "dechkouzunov-atanas-patsev-portraits-and-self-portraits-100-years-since-the-artist-s-birth-a95b760c12",
     "title": "ATANAS PATSEV. PORTRAITS AND SELF-PORTRAITS 100 Years Since the Artist’s Birth",
     "venue": "ATANAS PATSEV | PORTRAITS AND SELF-PORTRAITS",
@@ -358,6 +345,19 @@
     "lastUpdated": "2026-06-08T08:29:09.516Z"
   },
   {
+    "id": "programata-visiting-cad387648a",
+    "title": "Visiting | Дария Шаталова",
+    "artist": "Дария Шаталова",
+    "venue": "Depoo",
+    "exhibitionStart": "2026-06-09",
+    "exhibitionEnd": "2026-06-23",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/v-2/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/image_announcement.jpeg",
+    "lastUpdated": "2026-06-15T09:44:44.198Z"
+  },
+  {
     "id": "programata--134902f316",
     "title": "Отвъд повърхността | Елена Павлова",
     "artist": "Елена Павлова",
@@ -369,6 +369,19 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/otvad-povarhnostta-elena-pavlova/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/otvad-povarhnostta.jpg",
     "lastUpdated": "2026-06-08T08:29:09.516Z"
+  },
+  {
+    "id": "programata--47f1eee493",
+    "title": "Летящите реки | Калина Димитрова",
+    "artist": "Калина Димитрова",
+    "venue": "Charta Gallery",
+    "exhibitionStart": "2026-06-11",
+    "exhibitionEnd": "2026-07-11",
+    "eventType": "exhibition",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/letyasthite-reki-kalina-dimitrova/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/image19001844.jpg",
+    "lastUpdated": "2026-06-15T09:44:44.198Z"
   },
   {
     "id": "programata--e27d2d8e36",
