@@ -306,32 +306,6 @@
     "lastUpdated": "2026-06-08T08:29:09.516Z"
   },
   {
-    "id": "programata-images-of-soul-evolving-in-light-jennifer-pyron-3c07f84f87",
-    "title": "Images of Soul: Evolving in Light | Jennifer Pyron",
-    "artist": "Jennifer Pyron",
-    "venue": "Аросита",
-    "exhibitionStart": "2026-06-02",
-    "exhibitionEnd": "2026-06-16",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/images-of-soul-evolving-in-light-jennifer-pyron/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/fb-scaled.jpg",
-    "lastUpdated": "2026-06-08T08:29:09.516Z"
-  },
-  {
-    "id": "programata--c8bfad2a79",
-    "title": "Прелистени страници | Алекси Начев",
-    "artist": "Алекси Начев",
-    "venue": "Галерия Академия",
-    "exhibitionStart": "2026-06-02",
-    "exhibitionEnd": "2026-06-21",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/prelisteni-straniczi-aleksi-nachev/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/pokana_email_alexi_nachev_bg.jpg",
-    "lastUpdated": "2026-06-01T15:15:57.627Z"
-  },
-  {
     "id": "programata--f3e98b1bc0",
     "title": "Метаморфози | Карина Добрева и Кая Ценкуловска",
     "artist": "Карина Добрева и Кая Ценкуловска",
@@ -358,17 +332,30 @@
     "lastUpdated": "2026-06-15T09:44:44.198Z"
   },
   {
-    "id": "programata--134902f316",
-    "title": "Отвъд повърхността | Елена Павлова",
-    "artist": "Елена Павлова",
+    "id": "programata--ea7eb8d3dd",
+    "title": "Нови орбити | Ученическа изложба",
+    "artist": "Ученическа изложба",
+    "venue": "HOSTGALLERY",
+    "exhibitionStart": "2026-06-10",
+    "exhibitionEnd": "2026-06-27",
+    "eventType": "exhibition",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/novi-orbiti-uchenicheska-izlozhba/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/student-photoexh-neworbits-hostgallery-pr-june2026-rgb.png",
+    "lastUpdated": "2026-06-22T09:29:52.825Z"
+  },
+  {
+    "id": "programata-most-9ebcffa1b2",
+    "title": "Капитал от идеи | Финалистите от деветото издание на конкурса MOST се събират в обща изложба",
+    "artist": "Финалистите от деветото издание на конкурса MOST се събират в обща изложба",
     "venue": "Vivacom Art Hall",
-    "exhibitionStart": "2026-06-09",
-    "exhibitionEnd": "2026-06-20",
+    "exhibitionStart": "2026-06-11",
+    "exhibitionEnd": "2026-06-27",
     "eventType": "other",
     "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/otvad-povarhnostta-elena-pavlova/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/otvad-povarhnostta.jpg",
-    "lastUpdated": "2026-06-08T08:29:09.516Z"
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/kapital-ot-idei-finalistite-ot-devetoto-izdanie-na-konkursa-most-se-sabirat-v-obstha-izlozhba/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/most-2026-finalists_carousel-desktop.jpeg",
+    "lastUpdated": "2026-06-22T09:29:52.825Z"
   },
   {
     "id": "programata--47f1eee493",
@@ -395,5 +382,43 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/kopnezhi-neli-piperova-i-zheni-kirilova/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/plakat-final.png",
     "lastUpdated": "2026-06-08T08:29:09.516Z"
+  },
+  {
+    "id": "programata--dbea342c09",
+    "title": "Репетиция | Калин Серапионов",
+    "artist": "Калин Серапионов",
+    "venue": "Национална галерия Квадрат 500",
+    "exhibitionStart": "2026-06-16",
+    "exhibitionEnd": "2026-08-16",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/repeticziya-kalin-serapionov/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/ng_invitation.jpg",
+    "lastUpdated": "2026-06-22T09:29:52.825Z"
+  },
+  {
+    "id": "programata-archipelago-f839b3a66c",
+    "title": "ARCHIPELAGO | Стратос Калафатис",
+    "artist": "Стратос Калафатис",
+    "venue": "Синтезис",
+    "exhibitionStart": "2026-06-18",
+    "exhibitionEnd": "2026-07-23",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/archipelago-stratos-kalafatis/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/archipelago_digital_event.png",
+    "lastUpdated": "2026-06-22T09:29:52.825Z"
+  },
+  {
+    "id": "programata--37841de829",
+    "title": "Изложба на Иван Христов",
+    "venue": "Национална галерия в Двореца",
+    "exhibitionStart": "2026-06-18",
+    "exhibitionEnd": "2026-09-20",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/izlozhba-na-ivan-hristov/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/4.-sozopol-1935-1.jpg",
+    "lastUpdated": "2026-06-22T09:29:52.825Z"
   }
 ]
