@@ -235,18 +235,6 @@
     "imageUrl": "https://nationalgallery.bg/wp-content/uploads/2026/04/1-1-e1776925409256.jpg"
   },
   {
-    "id": "programata-5-5-art-fashion-d6b8ae4c3d",
-    "title": "5+5 / art+fashion",
-    "venue": "Софийски арсенал - Музей за съвременно изкуство",
-    "exhibitionStart": "2026-04-30",
-    "exhibitionEnd": "2026-06-26",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/5-5-art-fashion/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/artfashion_pokana.jpg",
-    "lastUpdated": "2026-06-01T15:15:57.627Z"
-  },
-  {
     "id": "nationalgallery-giro-ditalia-riding-towards-the-future",
     "title": "GIRO D’ITALIA. Riding towards the Future",
     "venue": "Kvadrat 500",
@@ -280,19 +268,6 @@
     "lastUpdated": "2026-06-01T15:15:57.627Z"
   },
   {
-    "id": "programata--b2b5c76692",
-    "title": "Нощта на времето | Радостин Седевчев",
-    "artist": "Радостин Седевчев",
-    "venue": "Институт за съвременно изкуство София",
-    "exhibitionStart": "2026-05-21",
-    "exhibitionEnd": "2026-06-27",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/nosthta-na-vremeto-radostin-sedevchev/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/ca17e47d-b171-b40d-ac31-32578ba64489.jpg",
-    "lastUpdated": "2026-06-01T15:15:57.627Z"
-  },
-  {
     "id": "dechkouzunov-atanas-patsev-portraits-and-self-portraits-100-years-since-the-artist-s-birth-a95b760c12",
     "title": "ATANAS PATSEV. PORTRAITS AND SELF-PORTRAITS 100 Years Since the Artist’s Birth",
     "venue": "ATANAS PATSEV | PORTRAITS AND SELF-PORTRAITS",
@@ -317,45 +292,6 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/metamorfozi-karina-dobreva-i-kaya-czenkulovska/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/2mqnmpcincy3lmkxghhhjoamtkvxpba8ennosygh.jpg",
     "lastUpdated": "2026-06-08T08:29:09.516Z"
-  },
-  {
-    "id": "programata-visiting-cad387648a",
-    "title": "Visiting | Дария Шаталова",
-    "artist": "Дария Шаталова",
-    "venue": "Depoo",
-    "exhibitionStart": "2026-06-09",
-    "exhibitionEnd": "2026-06-23",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/v-2/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/image_announcement.jpeg",
-    "lastUpdated": "2026-06-15T09:44:44.198Z"
-  },
-  {
-    "id": "programata--ea7eb8d3dd",
-    "title": "Нови орбити | Ученическа изложба",
-    "artist": "Ученическа изложба",
-    "venue": "HOSTGALLERY",
-    "exhibitionStart": "2026-06-10",
-    "exhibitionEnd": "2026-06-27",
-    "eventType": "exhibition",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/novi-orbiti-uchenicheska-izlozhba/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/student-photoexh-neworbits-hostgallery-pr-june2026-rgb.png",
-    "lastUpdated": "2026-06-22T09:29:52.825Z"
-  },
-  {
-    "id": "programata-most-9ebcffa1b2",
-    "title": "Капитал от идеи | Финалистите от деветото издание на конкурса MOST се събират в обща изложба",
-    "artist": "Финалистите от деветото издание на конкурса MOST се събират в обща изложба",
-    "venue": "Vivacom Art Hall",
-    "exhibitionStart": "2026-06-11",
-    "exhibitionEnd": "2026-06-27",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/kapital-ot-idei-finalistite-ot-devetoto-izdanie-na-konkursa-most-se-sabirat-v-obstha-izlozhba/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/most-2026-finalists_carousel-desktop.jpeg",
-    "lastUpdated": "2026-06-22T09:29:52.825Z"
   },
   {
     "id": "programata--47f1eee493",
