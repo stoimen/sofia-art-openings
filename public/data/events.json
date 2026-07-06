@@ -255,19 +255,6 @@
     "imageUrl": "https://nationalgallery.bg/wp-content/uploads/2026/04/IMG_4961.jpg"
   },
   {
-    "id": "programata--b6b20cd909",
-    "title": "Джиро Д’Италия | Кратка история на Италия на две колела",
-    "artist": "Кратка история на Италия на две колела",
-    "venue": "Национална галерия Квадрат 500",
-    "exhibitionStart": "2026-05-05",
-    "exhibitionEnd": "2026-07-05",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/dzhiro-ditaliya-kratka-istoriya-na-italiya-na-dve-kolela/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/05/screenshot-2026-05-04-205153.png",
-    "lastUpdated": "2026-06-01T15:15:57.627Z"
-  },
-  {
     "id": "dechkouzunov-atanas-patsev-portraits-and-self-portraits-100-years-since-the-artist-s-birth-a95b760c12",
     "title": "ATANAS PATSEV. PORTRAITS AND SELF-PORTRAITS 100 Years Since the Artist’s Birth",
     "venue": "ATANAS PATSEV | PORTRAITS AND SELF-PORTRAITS",
@@ -278,19 +265,6 @@
     "source": "dechkouzunov",
     "sourceUrl": "https://dug.sghg.bg/en/",
     "imageUrl": "https://dug.sghg.bg/wp-content/uploads/2026/05/01.jpg",
-    "lastUpdated": "2026-06-08T08:29:09.516Z"
-  },
-  {
-    "id": "programata--f3e98b1bc0",
-    "title": "Метаморфози | Карина Добрева и Кая Ценкуловска",
-    "artist": "Карина Добрева и Кая Ценкуловска",
-    "venue": "Credo Bonum",
-    "exhibitionStart": "2026-06-04",
-    "exhibitionEnd": "2026-07-04",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/metamorfozi-karina-dobreva-i-kaya-czenkulovska/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/2mqnmpcincy3lmkxghhhjoamtkvxpba8ennosygh.jpg",
     "lastUpdated": "2026-06-08T08:29:09.516Z"
   },
   {
@@ -305,19 +279,6 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/letyasthite-reki-kalina-dimitrova/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/image19001844.jpg",
     "lastUpdated": "2026-06-15T09:44:44.198Z"
-  },
-  {
-    "id": "programata--e27d2d8e36",
-    "title": "Копнежи | Нели Пиперова и Жени Кирилова",
-    "artist": "Нели Пиперова и Жени Кирилова",
-    "venue": "ONE Gallery",
-    "exhibitionStart": "2026-06-16",
-    "exhibitionEnd": "2026-06-30",
-    "eventType": "exhibition",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/kopnezhi-neli-piperova-i-zheni-kirilova/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/plakat-final.png",
-    "lastUpdated": "2026-06-08T08:29:09.516Z"
   },
   {
     "id": "programata--dbea342c09",
@@ -356,5 +317,44 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/izlozhba-na-ivan-hristov/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/4.-sozopol-1935-1.jpg",
     "lastUpdated": "2026-06-22T09:29:52.825Z"
+  },
+  {
+    "id": "programata--c5c47ed3bd",
+    "title": "Поле на отношението | Иван Борисов",
+    "artist": "Иван Борисов",
+    "venue": "Depoo",
+    "exhibitionStart": "2026-06-26",
+    "exhibitionEnd": "2026-07-10",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/pole-na-otnoshenieto-ivan-borisov/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/screenshot_2026-06-19_at_9.11.24.png",
+    "lastUpdated": "2026-07-06T08:04:21.237Z"
+  },
+  {
+    "id": "programata-some-cultural-issues-37a6674b48",
+    "title": "Some cultural issues | Александър Тошев",
+    "artist": "Александър Тошев",
+    "venue": "Аросита",
+    "exhibitionStart": "2026-07-02",
+    "exhibitionEnd": "2026-07-16",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/some-cultural-issues-aleksandar-toshev/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/pokana-scaled.jpg",
+    "lastUpdated": "2026-07-06T08:04:21.237Z"
+  },
+  {
+    "id": "programata--ae153ba9b4",
+    "title": "Изход | Мария Ландова",
+    "artist": "Мария Ландова",
+    "venue": "Съюз на българските художници Райко Алексиев",
+    "exhibitionStart": "2026-07-04",
+    "exhibitionEnd": "2026-07-10",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/izhod-mariya-landova/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/mariya-landova-samostoyatelna-izlozhba-izhod-izlozhbeni-izgledi-s-chast-ot-proizvedenita-fotograf-elena-spasova-sbh_.jpg",
+    "lastUpdated": "2026-07-06T08:04:21.237Z"
   }
 ]
