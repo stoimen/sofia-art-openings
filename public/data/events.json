@@ -268,19 +268,6 @@
     "lastUpdated": "2026-06-08T08:29:09.516Z"
   },
   {
-    "id": "programata--47f1eee493",
-    "title": "Летящите реки | Калина Димитрова",
-    "artist": "Калина Димитрова",
-    "venue": "Charta Gallery",
-    "exhibitionStart": "2026-06-11",
-    "exhibitionEnd": "2026-07-11",
-    "eventType": "exhibition",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/letyasthite-reki-kalina-dimitrova/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/image19001844.jpg",
-    "lastUpdated": "2026-06-15T09:44:44.198Z"
-  },
-  {
     "id": "programata--dbea342c09",
     "title": "Репетиция | Калин Серапионов",
     "artist": "Калин Серапионов",
@@ -319,19 +306,6 @@
     "lastUpdated": "2026-06-22T09:29:52.825Z"
   },
   {
-    "id": "programata--c5c47ed3bd",
-    "title": "Поле на отношението | Иван Борисов",
-    "artist": "Иван Борисов",
-    "venue": "Depoo",
-    "exhibitionStart": "2026-06-26",
-    "exhibitionEnd": "2026-07-10",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/pole-na-otnoshenieto-ivan-borisov/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/screenshot_2026-06-19_at_9.11.24.png",
-    "lastUpdated": "2026-07-06T08:04:21.237Z"
-  },
-  {
     "id": "programata-some-cultural-issues-37a6674b48",
     "title": "Some cultural issues | Александър Тошев",
     "artist": "Александър Тошев",
@@ -345,16 +319,16 @@
     "lastUpdated": "2026-07-06T08:04:21.237Z"
   },
   {
-    "id": "programata--ae153ba9b4",
-    "title": "Изход | Мария Ландова",
-    "artist": "Мария Ландова",
-    "venue": "Съюз на българските художници Райко Алексиев",
-    "exhibitionStart": "2026-07-04",
-    "exhibitionEnd": "2026-07-10",
+    "id": "programata--0f6198102f",
+    "title": "През изминалата година | Колективна изложба",
+    "artist": "Колективна изложба",
+    "venue": "Софийски арсенал - Музей за съвременно изкуство",
+    "exhibitionStart": "2026-07-09",
+    "exhibitionEnd": "2026-09-05",
     "eventType": "other",
     "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/izhod-mariya-landova/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/mariya-landova-samostoyatelna-izlozhba-izhod-izlozhbeni-izgledi-s-chast-ot-proizvedenita-fotograf-elena-spasova-sbh_.jpg",
-    "lastUpdated": "2026-07-06T08:04:21.237Z"
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/prez-izminalata-godina/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/prez-izminalata-godina-over-the-past-year.jpg",
+    "lastUpdated": "2026-07-13T06:38:31.942Z"
   }
 ]
