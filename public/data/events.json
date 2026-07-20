@@ -306,19 +306,6 @@
     "lastUpdated": "2026-06-22T09:29:52.825Z"
   },
   {
-    "id": "programata-some-cultural-issues-37a6674b48",
-    "title": "Some cultural issues | Александър Тошев",
-    "artist": "Александър Тошев",
-    "venue": "Аросита",
-    "exhibitionStart": "2026-07-02",
-    "exhibitionEnd": "2026-07-16",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/some-cultural-issues-aleksandar-toshev/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/pokana-scaled.jpg",
-    "lastUpdated": "2026-07-06T08:04:21.237Z"
-  },
-  {
     "id": "programata--0f6198102f",
     "title": "През изминалата година | Колективна изложба",
     "artist": "Колективна изложба",
@@ -330,5 +317,18 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/prez-izminalata-godina/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/prez-izminalata-godina-over-the-past-year.jpg",
     "lastUpdated": "2026-07-13T06:38:31.942Z"
+  },
+  {
+    "id": "programata--fdb37b5f1a",
+    "title": "След образа | Йоана Тужарова",
+    "artist": "Йоана Тужарова",
+    "venue": "Васка Емануилова",
+    "exhibitionStart": "2026-07-14",
+    "exhibitionEnd": "2026-09-13",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/sled-obraza-joana-tuzharova/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/electronic-invite-after-the-image-web-materials-scaled.png",
+    "lastUpdated": "2026-07-20T06:34:19.771Z"
   }
 ]
