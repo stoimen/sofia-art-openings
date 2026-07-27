@@ -281,19 +281,6 @@
     "lastUpdated": "2026-06-22T09:29:52.825Z"
   },
   {
-    "id": "programata-archipelago-f839b3a66c",
-    "title": "ARCHIPELAGO | Стратос Калафатис",
-    "artist": "Стратос Калафатис",
-    "venue": "Синтезис",
-    "exhibitionStart": "2026-06-18",
-    "exhibitionEnd": "2026-07-23",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/archipelago-stratos-kalafatis/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/archipelago_digital_event.png",
-    "lastUpdated": "2026-06-22T09:29:52.825Z"
-  },
-  {
     "id": "programata--37841de829",
     "title": "Изложба на Иван Христов",
     "venue": "Национална галерия в Двореца",
@@ -330,5 +317,31 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/sled-obraza-joana-tuzharova/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/electronic-invite-after-the-image-web-materials-scaled.png",
     "lastUpdated": "2026-07-20T06:34:19.771Z"
+  },
+  {
+    "id": "programata--78267dec03",
+    "title": "Разделителната линия | Томас Кнойбюлър",
+    "artist": "Томас Кнойбюлър",
+    "venue": "Галерия Пунта",
+    "exhibitionStart": "2026-07-16",
+    "exhibitionEnd": "2026-09-30",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/razdelitelnata-liniya-tomas-knojbyular/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/b6af58fd-6ac6-4fe5-24d5-e5af5ee9c188-scaled.jpg",
+    "lastUpdated": "2026-07-27T06:50:05.698Z"
+  },
+  {
+    "id": "programata--fb382a999f",
+    "title": "Структури на мълчанието | Василена Станчева",
+    "artist": "Василена Станчева",
+    "venue": "Аросита",
+    "exhibitionStart": "2026-07-20",
+    "exhibitionEnd": "2026-07-31",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/strukturi-na-malchanieto-vasilena-stancheva/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/e-pokana.jpg",
+    "lastUpdated": "2026-07-27T06:50:05.698Z"
   }
 ]
