@@ -332,16 +332,42 @@
     "lastUpdated": "2026-07-27T06:50:05.698Z"
   },
   {
-    "id": "programata--fb382a999f",
-    "title": "Структури на мълчанието | Василена Станчева",
-    "artist": "Василена Станчева",
-    "venue": "Аросита",
-    "exhibitionStart": "2026-07-20",
-    "exhibitionEnd": "2026-07-31",
+    "id": "programata-poly-092475743a",
+    "title": "Poly | Олоф Ярлбро",
+    "artist": "Олоф Ярлбро",
+    "venue": "Галерия PhotoSynthesis",
+    "exhibitionStart": "2026-07-30",
+    "exhibitionEnd": "2026-09-26",
     "eventType": "other",
     "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/strukturi-na-malchanieto-vasilena-stancheva/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/e-pokana.jpg",
-    "lastUpdated": "2026-07-27T06:50:05.698Z"
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/poly-olof-yarlbro/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/4cdb7e58-0d00-9e60-c14a-f32fbf248ee3.jpg",
+    "lastUpdated": "2026-08-03T06:45:19.722Z"
+  },
+  {
+    "id": "programata--bbfd436a3f",
+    "title": "Визионерът | Йожен Кариер",
+    "artist": "Йожен Кариер",
+    "venue": "Национална галерия Квадрат 500",
+    "exhibitionStart": "2026-07-30",
+    "exhibitionEnd": "2026-10-04",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/vizionerat-jozhen-karier/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/carriere-pokana-scaled.jpg",
+    "lastUpdated": "2026-08-03T06:45:19.722Z"
+  },
+  {
+    "id": "programata--2aa8cafa5d",
+    "title": "Сънища на будния разум | Франсиско Гоя",
+    "artist": "Франсиско Гоя",
+    "venue": "Национална галерия Квадрат 500",
+    "exhibitionStart": "2026-08-04",
+    "exhibitionEnd": "2026-10-21",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/sanisthama-budniya-razum-fransisko-goya/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/5-zhenski-gluposti-iz-disparates.jpg",
+    "lastUpdated": "2026-08-03T06:45:19.722Z"
   }
 ]
