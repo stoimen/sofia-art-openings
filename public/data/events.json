@@ -268,19 +268,6 @@
     "lastUpdated": "2026-06-08T08:29:09.516Z"
   },
   {
-    "id": "programata--dbea342c09",
-    "title": "Репетиция | Калин Серапионов",
-    "artist": "Калин Серапионов",
-    "venue": "Национална галерия Квадрат 500",
-    "exhibitionStart": "2026-06-16",
-    "exhibitionEnd": "2026-08-16",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/repeticziya-kalin-serapionov/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/06/ng_invitation.jpg",
-    "lastUpdated": "2026-06-22T09:29:52.825Z"
-  },
-  {
     "id": "programata--37841de829",
     "title": "Изложба на Иван Христов",
     "venue": "Национална галерия в Двореца",
@@ -369,5 +356,18 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/sanisthama-budniya-razum-fransisko-goya/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/5-zhenski-gluposti-iz-disparates.jpg",
     "lastUpdated": "2026-08-03T06:45:19.722Z"
+  },
+  {
+    "id": "programata--e44d3e70ff",
+    "title": "Архив на обезличаване | Мултимедийна инсталация на Венцислав Нанов",
+    "artist": "Мултимедийна инсталация на Венцислав Нанов",
+    "venue": "Depoo",
+    "exhibitionStart": "2026-08-09",
+    "exhibitionEnd": "2026-08-30",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/arhiv-na-obezlichavane-mul/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/08/facebook_bg.jpeg",
+    "lastUpdated": "2026-08-17T04:20:51.220Z"
   }
 ]
