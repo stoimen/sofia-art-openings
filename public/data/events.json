@@ -358,16 +358,42 @@
     "lastUpdated": "2026-08-03T06:45:19.722Z"
   },
   {
-    "id": "programata--e44d3e70ff",
-    "title": "Архив на обезличаване | Мултимедийна инсталация на Венцислав Нанов",
-    "artist": "Мултимедийна инсталация на Венцислав Нанов",
-    "venue": "Depoo",
-    "exhibitionStart": "2026-08-09",
-    "exhibitionEnd": "2026-08-30",
+    "id": "programata--1f420c4655",
+    "title": "Нови пейзажи | Руслан Котев",
+    "artist": "Руслан Котев",
+    "venue": "Париж",
+    "exhibitionStart": "2026-08-27",
+    "exhibitionEnd": "2026-09-12",
     "eventType": "other",
     "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/arhiv-na-obezlichavane-mul/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/08/facebook_bg.jpeg",
-    "lastUpdated": "2026-08-17T04:20:51.220Z"
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/novi-pejzazhi-ruslan-kotev/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/08/ruslan-kotev-exhibition-cover.jpg",
+    "lastUpdated": "2026-08-31T10:02:23.006Z"
+  },
+  {
+    "id": "programata--82051d0dc3",
+    "title": "Дойдохме, за да бъдем хора | Изложба на Мустафа Хорасан и Хюсеин Ъшък",
+    "artist": "Изложба на Мустафа Хорасан и Хюсеин Ъшък",
+    "venue": "Съюз на българските художници Шипка 6",
+    "exhibitionStart": "2026-09-01",
+    "exhibitionEnd": "2026-09-24",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/dojdohme-za-da-badem-hora-izlozhba-na-mustafa-horasan-i-hyusein-ashak/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/08/web-doidohme-za-da-badem-hora-krasimir-linkov-uba-2026.jpg",
+    "lastUpdated": "2026-08-31T10:02:23.006Z"
+  },
+  {
+    "id": "programata--fa584c21f8",
+    "title": "Открити пространства | Бисерка Огнянова",
+    "artist": "Бисерка Огнянова",
+    "venue": "Галерия-книжарница София Прес",
+    "exhibitionStart": "2026-09-01",
+    "exhibitionEnd": "2026-09-18",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/otkriti-prostranstva-biserka-ognyanova/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/08/b.ognyanova_openspaces_1080x1080.png",
+    "lastUpdated": "2026-08-31T10:02:23.006Z"
   }
 ]
