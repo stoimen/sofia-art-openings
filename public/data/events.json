@@ -280,19 +280,6 @@
     "lastUpdated": "2026-06-22T09:29:52.825Z"
   },
   {
-    "id": "programata--0f6198102f",
-    "title": "През изминалата година | Колективна изложба",
-    "artist": "Колективна изложба",
-    "venue": "Софийски арсенал - Музей за съвременно изкуство",
-    "exhibitionStart": "2026-07-09",
-    "exhibitionEnd": "2026-09-05",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/prez-izminalata-godina/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/07/prez-izminalata-godina-over-the-past-year.jpg",
-    "lastUpdated": "2026-07-13T06:38:31.942Z"
-  },
-  {
     "id": "programata--fdb37b5f1a",
     "title": "След образа | Йоана Тужарова",
     "artist": "Йоана Тужарова",
@@ -395,5 +382,44 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/otkriti-prostranstva-biserka-ognyanova/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/08/b.ognyanova_openspaces_1080x1080.png",
     "lastUpdated": "2026-08-31T10:02:23.006Z"
+  },
+  {
+    "id": "programata--2e7c84ec36",
+    "title": "Абсурд на плажа | Марин Маринов",
+    "artist": "Марин Маринов",
+    "venue": "HOSTGALLERY",
+    "exhibitionStart": "2026-09-03",
+    "exhibitionEnd": "2026-09-24",
+    "eventType": "exhibition",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/absurd-na-plazha-marin-marinov/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/08/784199526_1059518316659372_3830775634946861948_n.jpg",
+    "lastUpdated": "2026-09-07T08:35:37.408Z"
+  },
+  {
+    "id": "programata--d82b54e26f",
+    "title": "Странствания из историята | Фотографиите на Улрих Вюст",
+    "artist": "Фотографиите на Улрих Вюст",
+    "venue": "Гьоте-институт",
+    "exhibitionStart": "2026-09-10",
+    "exhibitionEnd": "2026-11-22",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/krasotata-na-kasnoantichnite-rimski-mozajki-otkriti-v-balgariya-nova-izlozhba-v-cheshkiya-czentar/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/08/2.-leporello_pracht_der_macht_aufgeklappt-scaled.jpg",
+    "lastUpdated": "2026-09-07T08:35:37.408Z"
+  },
+  {
+    "id": "programata--e7fe6dad85",
+    "title": "Граници | Групова изложба на гръцки артисти в диалог между София и Солун",
+    "artist": "Групова изложба на гръцки артисти в диалог между София и Солун",
+    "venue": "Гьоте-институт",
+    "exhibitionStart": "2026-09-11",
+    "exhibitionEnd": "2026-09-30",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/graniczi-grupova-izlozhba-na-graczki-artisti-v-dialog-mezhdu-sofiya-i-solun/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/08/borders_fb_event_bg.png",
+    "lastUpdated": "2026-09-07T08:35:37.408Z"
   }
 ]
