@@ -281,32 +281,6 @@
     "lastUpdated": "2026-09-07T08:35:37.408Z"
   },
   {
-    "id": "programata--e7fe6dad85",
-    "title": "Граници | Групова изложба на гръцки артисти в диалог между София и Солун",
-    "artist": "Групова изложба на гръцки артисти в диалог между София и Солун",
-    "venue": "Гьоте-институт",
-    "exhibitionStart": "2026-09-11",
-    "exhibitionEnd": "2026-09-30",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/graniczi-grupova-izlozhba-na-graczki-artisti-v-dialog-mezhdu-sofiya-i-solun/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/08/borders_fb_event_bg.png",
-    "lastUpdated": "2026-09-07T08:35:37.408Z"
-  },
-  {
-    "id": "programata-ii-95ac94c92f",
-    "title": "Експонати II: Лаборатории на терен | Фондация Акт Култура",
-    "artist": "Фондация Акт Култура",
-    "venue": "FIGURA Art Space",
-    "exhibitionStart": "2026-09-13",
-    "exhibitionEnd": "2026-09-29",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/eksponati-ii-laboratorii-na-teren-fondacziya-akt-kultura/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/viber_image_2026-09-10_16-08-50-620.jpg",
-    "lastUpdated": "2026-09-21T09:15:41.427Z"
-  },
-  {
     "id": "programata--9cab2c6898",
     "title": "Четирите елемента | Павел Койчев",
     "artist": "Павел Койчев",
@@ -317,19 +291,6 @@
     "source": "programata",
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/chetirite-elementa-pavel-kojchev/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/pokana_web.jpg",
-    "lastUpdated": "2026-09-21T09:15:41.427Z"
-  },
-  {
-    "id": "programata--24ba4d4a93",
-    "title": "Невидими нишки | Силвия Павлова",
-    "artist": "Силвия Павлова",
-    "venue": "Общински културен институт Красно село",
-    "exhibitionStart": "2026-09-16",
-    "exhibitionEnd": "2026-09-29",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/nevidimi-nishki-silviya-pavlova/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/silvia-pavlova-nevidimi-nishki-2026-fb.png",
     "lastUpdated": "2026-09-21T09:15:41.427Z"
   },
   {
@@ -355,19 +316,6 @@
     "source": "dechkouzunov",
     "sourceUrl": "https://dug.sghg.bg/en/",
     "imageUrl": "https://dug.sghg.bg/wp-content/uploads/2026/09/06_Ivan-Penkov.jpg",
-    "lastUpdated": "2026-09-21T09:15:41.427Z"
-  },
-  {
-    "id": "programata-making-70ccbe9b6a",
-    "title": "Making | Мария Минкова",
-    "artist": "Мария Минкова",
-    "venue": "Аросита",
-    "exhibitionStart": "2026-09-21",
-    "exhibitionEnd": "2026-09-30",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/making-mariya-minkova/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/maria_minkova-pokana.jpg",
     "lastUpdated": "2026-09-21T09:15:41.427Z"
   },
   {
@@ -447,17 +395,30 @@
     "lastUpdated": "2026-09-28T10:06:57.857Z"
   },
   {
-    "id": "programata--6ca4bb17f9",
-    "title": "Противоречия | Васил Абаджиев",
-    "artist": "Васил Абаджиев",
-    "venue": "Ракурси",
+    "id": "programata--429896caf4",
+    "title": "Дом | Елена Стоева",
+    "artist": "Елена Стоева",
+    "venue": "Париж",
     "exhibitionStart": "2026-10-01",
-    "exhibitionEnd": "2026-10-17",
+    "exhibitionEnd": "2026-10-16",
     "eventType": "other",
     "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/protivorechiya-vasil-abadzhiev/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/g.jpg",
-    "lastUpdated": "2026-09-28T10:06:57.857Z"
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/dom-elena-stoeva/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/elena-stoeva-izlozhba-dom-galeriya-parizh.jpg",
+    "lastUpdated": "2026-10-05T10:47:56.132Z"
+  },
+  {
+    "id": "programata--628106548b",
+    "title": "Метаморфоза | Васил Докев – Вадо",
+    "artist": "Васил Докев – Вадо",
+    "venue": "ONE Gallery",
+    "exhibitionStart": "2026-10-01",
+    "exhibitionEnd": "2026-10-21",
+    "eventType": "exhibition",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/metamorfoza-vasil-dokev-vado/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/image0.png",
+    "lastUpdated": "2026-10-05T10:47:56.132Z"
   },
   {
     "id": "programata-1926-2013-71758b8780",
@@ -497,5 +458,17 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/kato-v-san-nadezhda-kostova/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/dreamlike_cover.jpg",
     "lastUpdated": "2026-09-28T10:06:57.857Z"
+  },
+  {
+    "id": "programata-credo-bonum-f9ff2fc294",
+    "title": "Нора Ампова напуска платното и превръща галерия Credo Bonum в обитаем пейзаж",
+    "venue": "Credo Bonum",
+    "exhibitionStart": "2026-10-06",
+    "exhibitionEnd": "2026-11-06",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/nora-ampova-napuska-platnoto-i-prevrastha-galeriya-credo-bonum-v-obitaem-pejzazh/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/future-landscape-baner-bg.jpg",
+    "lastUpdated": "2026-10-05T10:47:56.132Z"
   }
 ]
