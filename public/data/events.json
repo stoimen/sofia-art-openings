@@ -345,19 +345,6 @@
     "lastUpdated": "2026-09-28T10:06:57.857Z"
   },
   {
-    "id": "programata--b16d9602b9",
-    "title": "Истории от тъмното | Лора Пимио и Атанас Георгиев",
-    "artist": "Лора Пимио и Атанас Георгиев",
-    "venue": "Depoo",
-    "exhibitionStart": "2026-09-24",
-    "exhibitionEnd": "2026-10-10",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/istorii-ot-tamnoto-lora-pimio-i-atanas-georgiev/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/cover_facebook-1.png",
-    "lastUpdated": "2026-09-28T10:06:57.857Z"
-  },
-  {
     "id": "programata-hostgallery-uncertain-ground-paulius-liaupa-4aa77eb323",
     "title": "HOSTGALLERY представя Uncertain Ground налитовския артист Paulius Šliaupa",
     "venue": "HOSTGALLERY",
@@ -380,18 +367,6 @@
     "source": "programata",
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/strukturi-ivan-hristov-1900-1987/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/strukturi_pokana.jpeg",
-    "lastUpdated": "2026-09-28T10:06:57.857Z"
-  },
-  {
-    "id": "programata--3d3bd0b4da",
-    "title": "Изкуството на Джън-Шан-Жен",
-    "venue": "nOva art space",
-    "exhibitionStart": "2026-09-30",
-    "exhibitionEnd": "2026-10-09",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/izkustvoto-na-dzhan-shan-zhen/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/sofiya-2026-pokana.jpg",
     "lastUpdated": "2026-09-28T10:06:57.857Z"
   },
   {
@@ -434,19 +409,6 @@
     "lastUpdated": "2026-09-28T10:06:57.857Z"
   },
   {
-    "id": "programata--a31b2abeea",
-    "title": "ЯМР | Златина Тенева и Даниела Димитрова",
-    "artist": "Златина Тенева и Даниела Димитрова",
-    "venue": "Bobbina Cultural Space",
-    "exhibitionStart": "2026-10-03",
-    "exhibitionEnd": "2026-10-07",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/yamr-zlatina-teneva-i-daniela-dimitrova/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/fqpykt7pkbef4gluvkhtybt5jrf51jqlqtjqf9rx.png",
-    "lastUpdated": "2026-09-28T10:06:57.857Z"
-  },
-  {
     "id": "programata--f826404387",
     "title": "Като в сън | Надежда Костова",
     "artist": "Надежда Костова",
@@ -470,5 +432,18 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/nora-ampova-napuska-platnoto-i-prevrastha-galeriya-credo-bonum-v-obitaem-pejzazh/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/future-landscape-baner-bg.jpg",
     "lastUpdated": "2026-10-05T10:47:56.132Z"
+  },
+  {
+    "id": "programata-hinge-points-atelierele-sc-nteia-3464ecdbb9",
+    "title": "Hinge Points | Групова изложба, представена от Atelierele Scânteia",
+    "artist": "Групова изложба, представена от Atelierele Scânteia",
+    "venue": "Галерия Пунта",
+    "exhibitionStart": "2026-10-09",
+    "exhibitionEnd": "2026-11-28",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/hinge-points-grupova-izlozhba-predstavena-ot-atelierele-sc%c3%a2nteia/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/258cadb2-b126-d21a-bef7-e4f2cfa7cc5a-scaled.jpg",
+    "lastUpdated": "2026-10-12T11:15:57.862Z"
   }
 ]
