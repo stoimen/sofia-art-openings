@@ -255,19 +255,6 @@
     "imageUrl": "https://nationalgallery.bg/wp-content/uploads/2026/04/IMG_4961.jpg"
   },
   {
-    "id": "programata-100-5e2fcae0ae",
-    "title": "Макондо | Майа Антова – Майото [100 години от рождението на художничката Иванка Сокерова]",
-    "artist": "Майа Антова – Майото [100 години от рождението на художничката Иванка Сокерова]",
-    "venue": "Софийски арсенал - Музей за съвременно изкуство",
-    "exhibitionStart": "2026-09-10",
-    "exhibitionEnd": "2026-10-18",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/makondo-maja-antova-majoto/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/macondo_pokana-scaled.jpg",
-    "lastUpdated": "2026-09-21T09:15:41.427Z"
-  },
-  {
     "id": "programata--d82b54e26f",
     "title": "Странствания из историята | Фотографиите на Улрих Вюст",
     "artist": "Фотографиите на Улрих Вюст",
@@ -319,19 +306,6 @@
     "lastUpdated": "2026-09-21T09:15:41.427Z"
   },
   {
-    "id": "programata-obsession-52c6461ca9",
-    "title": "Obsession | Богдана Топрева",
-    "artist": "Богдана Топрева",
-    "venue": "Галерия-книжарница София Прес",
-    "exhibitionStart": "2026-09-23",
-    "exhibitionEnd": "2026-10-13",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/obsession-bogdana-topreva/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/pokana-bt.jpg",
-    "lastUpdated": "2026-09-21T09:15:41.427Z"
-  },
-  {
     "id": "programata--4764827f5a",
     "title": "Щастието като форма на съпротива | Изложба съвременно изкуство",
     "artist": "Изложба съвременно изкуство",
@@ -342,18 +316,6 @@
     "source": "programata",
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/sthastieto-kato-forma-na-saprotiva-izlozhba-savremenno-izkustvo/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/ve_happiness-resistance_facebook-event.png",
-    "lastUpdated": "2026-09-28T10:06:57.857Z"
-  },
-  {
-    "id": "programata-hostgallery-uncertain-ground-paulius-liaupa-4aa77eb323",
-    "title": "HOSTGALLERY представя Uncertain Ground налитовския артист Paulius Šliaupa",
-    "venue": "HOSTGALLERY",
-    "exhibitionStart": "2026-09-29",
-    "exhibitionEnd": "2026-10-17",
-    "eventType": "exhibition",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/hostgallery-predstavya-uncertain-ground-nalitovskiya-artist-paulius-%c5%a1liaupa/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/pauliussliaupa-uncertainground-exh-hostgallery-some-01-bg-2.jpg",
     "lastUpdated": "2026-09-28T10:06:57.857Z"
   },
   {
@@ -368,19 +330,6 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/strukturi-ivan-hristov-1900-1987/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/strukturi_pokana.jpeg",
     "lastUpdated": "2026-09-28T10:06:57.857Z"
-  },
-  {
-    "id": "programata--429896caf4",
-    "title": "Дом | Елена Стоева",
-    "artist": "Елена Стоева",
-    "venue": "Париж",
-    "exhibitionStart": "2026-10-01",
-    "exhibitionEnd": "2026-10-16",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/dom-elena-stoeva/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/elena-stoeva-izlozhba-dom-galeriya-parizh.jpg",
-    "lastUpdated": "2026-10-05T10:47:56.132Z"
   },
   {
     "id": "programata--628106548b",
@@ -406,19 +355,6 @@
     "source": "programata",
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/tihiyat-govor-na-czvetovete-dora-kancheva-1926-2013/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/122x182-dora-kancheva-1.7mb-scaled.jpg",
-    "lastUpdated": "2026-09-28T10:06:57.857Z"
-  },
-  {
-    "id": "programata--f826404387",
-    "title": "Като в сън | Надежда Костова",
-    "artist": "Надежда Костова",
-    "venue": "Cryptid Art Space",
-    "exhibitionStart": "2026-10-05",
-    "exhibitionEnd": "2026-10-17",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/kato-v-san-nadezhda-kostova/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/dreamlike_cover.jpg",
     "lastUpdated": "2026-09-28T10:06:57.857Z"
   },
   {
