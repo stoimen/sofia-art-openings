@@ -255,32 +255,6 @@
     "imageUrl": "https://nationalgallery.bg/wp-content/uploads/2026/04/IMG_4961.jpg"
   },
   {
-    "id": "programata--d82b54e26f",
-    "title": "Странствания из историята | Фотографиите на Улрих Вюст",
-    "artist": "Фотографиите на Улрих Вюст",
-    "venue": "Гьоте-институт",
-    "exhibitionStart": "2026-09-10",
-    "exhibitionEnd": "2026-11-22",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/krasotata-na-kasnoantichnite-rimski-mozajki-otkriti-v-balgariya-nova-izlozhba-v-cheshkiya-czentar/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/08/2.-leporello_pracht_der_macht_aufgeklappt-scaled.jpg",
-    "lastUpdated": "2026-09-07T08:35:37.408Z"
-  },
-  {
-    "id": "programata--9cab2c6898",
-    "title": "Четирите елемента | Павел Койчев",
-    "artist": "Павел Койчев",
-    "venue": "Софийска градска художествена галерия",
-    "exhibitionStart": "2026-09-15",
-    "exhibitionEnd": "2026-11-08",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/chetirite-elementa-pavel-kojchev/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/pokana_web.jpg",
-    "lastUpdated": "2026-09-21T09:15:41.427Z"
-  },
-  {
     "id": "programata-xviii-xx-e66a92b0b4",
     "title": "Японска графика XVIII-XX век",
     "venue": "Национална галерия в Двореца",
@@ -332,32 +306,6 @@
     "lastUpdated": "2026-09-28T10:06:57.857Z"
   },
   {
-    "id": "programata--628106548b",
-    "title": "Метаморфоза | Васил Докев – Вадо",
-    "artist": "Васил Докев – Вадо",
-    "venue": "ONE Gallery",
-    "exhibitionStart": "2026-10-01",
-    "exhibitionEnd": "2026-10-21",
-    "eventType": "exhibition",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/metamorfoza-vasil-dokev-vado/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/image0.png",
-    "lastUpdated": "2026-10-05T10:47:56.132Z"
-  },
-  {
-    "id": "programata-1926-2013-71758b8780",
-    "title": "Тихият говор на цветовете | Дора Кънчева [1926 – 2013]",
-    "artist": "Дора Кънчева [1926 – 2013]",
-    "venue": "Съюз на българските художници Шипка 6",
-    "exhibitionStart": "2026-10-01",
-    "exhibitionEnd": "2026-10-20",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/tihiyat-govor-na-czvetovete-dora-kancheva-1926-2013/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/122x182-dora-kancheva-1.7mb-scaled.jpg",
-    "lastUpdated": "2026-09-28T10:06:57.857Z"
-  },
-  {
     "id": "programata-credo-bonum-f9ff2fc294",
     "title": "Нора Ампова напуска платното и превръща галерия Credo Bonum в обитаем пейзаж",
     "venue": "Credo Bonum",
@@ -381,5 +329,96 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/hinge-points-grupova-izlozhba-predstavena-ot-atelierele-sc%c3%a2nteia/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/258cadb2-b126-d21a-bef7-e4f2cfa7cc5a-scaled.jpg",
     "lastUpdated": "2026-10-12T11:15:57.862Z"
+  },
+  {
+    "id": "programata--30765f1ab1",
+    "title": "Наративи | Групова изложба в галерия Сердика",
+    "artist": "Групова изложба в галерия Сердика",
+    "venue": "Сердика",
+    "exhibitionStart": "2026-10-13",
+    "exhibitionEnd": "2026-10-31",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/narativi-grupova-izlozhba-v-galeriya-serdika/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/image.jpeg",
+    "lastUpdated": "2026-10-26T09:18:09.884Z"
+  },
+  {
+    "id": "programata--ca5482cbf7",
+    "title": "Живи линии | Мирела Събева",
+    "artist": "Мирела Събева",
+    "venue": "Галерия-книжарница София Прес",
+    "exhibitionStart": "2026-10-15",
+    "exhibitionEnd": "2026-10-30",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/zhivi-linii/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/img_6950.jpg",
+    "lastUpdated": "2026-10-26T09:18:09.884Z"
+  },
+  {
+    "id": "programata--4013a7523c",
+    "title": "Морски дневник | Гълъб Гълъбов",
+    "artist": "Гълъб Гълъбов",
+    "venue": "Арте",
+    "exhibitionStart": "2026-10-16",
+    "exhibitionEnd": "2026-10-30",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/morski-dnevnik-galab-galabov/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/img-20260902-wa0011.jpg",
+    "lastUpdated": "2026-10-26T09:18:09.884Z"
+  },
+  {
+    "id": "programata-the-freak-show-art-show-f2cf4af99d",
+    "title": "The Freak Show Art Show | Групова изложба по идея на Явор Боянов",
+    "artist": "Групова изложба по идея на Явор Боянов",
+    "venue": "Cryptid Art Space",
+    "exhibitionStart": "2026-10-19",
+    "exhibitionEnd": "2026-10-31",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/the-freak-show-art-show-grupova-izlozhba-po-ideya-na-yavor-boyanov/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/tfsas_event_cover.jpg",
+    "lastUpdated": "2026-10-26T09:18:09.884Z"
+  },
+  {
+    "id": "programata--9bb4515f92",
+    "title": "Синхроничност | Ретроспективна изложба на Даниел Динев",
+    "artist": "Ретроспективна изложба на Даниел Динев",
+    "venue": "Общински културен институт Красно село",
+    "exhibitionStart": "2026-10-19",
+    "exhibitionEnd": "2026-10-31",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/sinhronichnost-retrospektivna-izlozhba-na-daniel-dinev/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/image-3.png",
+    "lastUpdated": "2026-10-26T09:18:09.884Z"
+  },
+  {
+    "id": "programata--3babb47a9c",
+    "title": "Посоки | Румен Рачев",
+    "artist": "Румен Рачев",
+    "venue": "Ракурси",
+    "exhibitionStart": "2026-10-20",
+    "exhibitionEnd": "2026-11-07",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/posoki-rumen-rachev/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/1-1.jpg",
+    "lastUpdated": "2026-10-26T09:18:09.884Z"
+  },
+  {
+    "id": "programata-10-a8ddccdac8",
+    "title": "Селски симфонии | 10 архитектурни разказа от селата",
+    "artist": "10 архитектурни разказа от селата",
+    "venue": "Музей Борис Христов",
+    "exhibitionStart": "2026-10-22",
+    "exhibitionEnd": "2026-10-28",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/selski-simfonii/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/poster.jpg",
+    "lastUpdated": "2026-10-26T09:18:09.884Z"
   }
 ]
