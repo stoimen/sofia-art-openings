@@ -268,46 +268,6 @@
     "lastUpdated": "2026-09-21T09:15:41.427Z"
   },
   {
-    "id": "programata--4764827f5a",
-    "title": "Щастието като форма на съпротива | Изложба съвременно изкуство",
-    "artist": "Изложба съвременно изкуство",
-    "venue": "Васка Емануилова",
-    "exhibitionStart": "2026-09-23",
-    "exhibitionEnd": "2026-11-29",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/sthastieto-kato-forma-na-saprotiva-izlozhba-savremenno-izkustvo/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/ve_happiness-resistance_facebook-event.png",
-    "lastUpdated": "2026-09-28T10:06:57.857Z"
-  },
-  {
-    "id": "credobonum-future-landscape-an-exhibition-by-nora-ampova-cb060cd24e",
-    "title": "Future Landscape – An exhibition by Nora Ampova",
-    "artist": "Nora Ampova Curated by Vesela Nozharova",
-    "venue": "Credo Bonum Gallery",
-    "address": "2 Slavyanska St., entrance from Benkovski St., 1000 Sofia, Bulgaria",
-    "exhibitionStart": "2026-10-06",
-    "exhibitionEnd": "2026-11-06",
-    "eventType": "exhibition",
-    "source": "credobonum",
-    "sourceUrl": "https://credobonum.bg/en/future-landscape-an-exhibition-by-nora-ampova/",
-    "description": "Landscape from the Future An exhibition by Nora Ampova Curated by Vesela Nozharova Opening: Tuesday, 6 October 2026, 18:00 The exhibition runs until 6 November 2026.",
-    "imageUrl": "https://credobonum.bg/en/wp-content/uploads/sites/3/2026/10/FUTURE-LANDSCAPE-baner-bg-780x520.jpg",
-    "lastUpdated": "2026-11-02T11:37:29.366Z"
-  },
-  {
-    "id": "programata-credo-bonum-f9ff2fc294",
-    "title": "Нора Ампова напуска платното и превръща галерия Credo Bonum в обитаем пейзаж",
-    "venue": "Credo Bonum",
-    "exhibitionStart": "2026-10-06",
-    "exhibitionEnd": "2026-11-06",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/nora-ampova-napuska-platnoto-i-prevrastha-galeriya-credo-bonum-v-obitaem-pejzazh/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/09/future-landscape-baner-bg.jpg",
-    "lastUpdated": "2026-10-05T10:47:56.132Z"
-  },
-  {
     "id": "programata-hinge-points-atelierele-sc-nteia-3464ecdbb9",
     "title": "Hinge Points | Групова изложба, представена от Atelierele Scânteia",
     "artist": "Групова изложба, представена от Atelierele Scânteia",
@@ -319,19 +279,6 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/hinge-points-grupova-izlozhba-predstavena-ot-atelierele-sc%c3%a2nteia/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/258cadb2-b126-d21a-bef7-e4f2cfa7cc5a-scaled.jpg",
     "lastUpdated": "2026-10-12T11:15:57.862Z"
-  },
-  {
-    "id": "programata--3babb47a9c",
-    "title": "Посоки | Румен Рачев",
-    "artist": "Румен Рачев",
-    "venue": "Ракурси",
-    "exhibitionStart": "2026-10-20",
-    "exhibitionEnd": "2026-11-07",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/posoki-rumen-rachev/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/1-1.jpg",
-    "lastUpdated": "2026-10-26T09:18:09.884Z"
   },
   {
     "id": "programata--91a213a25e",
@@ -373,6 +320,31 @@
     "lastUpdated": "2026-11-02T11:37:29.366Z"
   },
   {
+    "id": "programata-scenocosme-automatic-gallery-831d485a32",
+    "title": "Scenocosme в Automatic Gallery: когато природата и технологиите влязат в диалог",
+    "venue": "Галерия АВТОМАТИК",
+    "exhibitionStart": "2026-11-02",
+    "exhibitionEnd": "2026-12-09",
+    "eventType": "exhibition",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/scenocosme-v-automatic-gallery-kogato-prirodata-i-tehnologiite-vlyazat-v-dialog/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/20240315_141255-scaled.jpg",
+    "lastUpdated": "2026-11-09T12:00:23.703Z"
+  },
+  {
+    "id": "programata--31cd43ef23",
+    "title": "Извънвремие | Свилена Тенева",
+    "artist": "Свилена Тенева",
+    "venue": "Париж",
+    "exhibitionStart": "2026-11-02",
+    "exhibitionEnd": "2026-11-14",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/izvanvremie-svilena-teneva/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/svilena-teneva-izsledovatel-na-tishinata-24x33cm.jpg",
+    "lastUpdated": "2026-11-09T12:00:23.703Z"
+  },
+  {
     "id": "programata-object-of-mine-33df95c17b",
     "title": "OBJECT OF MINE | Самуил Велев",
     "artist": "Самуил Велев",
@@ -397,5 +369,18 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/polet-za-izbrani-nikolaj-stoev/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/stoev.jpg",
     "lastUpdated": "2026-11-02T11:37:29.366Z"
+  },
+  {
+    "id": "programata--370b971ff4",
+    "title": "Логика на невъзможното | Динко Ангелов",
+    "artist": "Динко Ангелов",
+    "venue": "Аросита",
+    "exhibitionStart": "2026-11-05",
+    "exhibitionEnd": "2026-11-19",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/logika-na-nevazmozhnoto-dinko-angelov/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/mkk_0980.jpg",
+    "lastUpdated": "2026-11-09T12:00:23.703Z"
   }
 ]
