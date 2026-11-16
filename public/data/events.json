@@ -255,19 +255,6 @@
     "imageUrl": "https://nationalgallery.bg/wp-content/uploads/2026/04/IMG_4961.jpg"
   },
   {
-    "id": "dechkouzunov-dechko-uzunov-ivan-penkov-directions-f16d6760f5",
-    "title": "DECHKO UZUNOV/IVAN PENKOV. DIRECTIONS",
-    "venue": "DECHKO UZUNOV/IVAN PENKOV. DIRECTIONS",
-    "address": "24 Dragan Tsankov Blvd., Izgrev, 1113 Sofia, Bulgaria",
-    "exhibitionStart": "2026-09-18",
-    "exhibitionEnd": "2026-11-15",
-    "eventType": "exhibition",
-    "source": "dechkouzunov",
-    "sourceUrl": "https://dug.sghg.bg/en/",
-    "imageUrl": "https://dug.sghg.bg/wp-content/uploads/2026/09/06_Ivan-Penkov.jpg",
-    "lastUpdated": "2026-09-21T09:15:41.427Z"
-  },
-  {
     "id": "programata-hinge-points-atelierele-sc-nteia-3464ecdbb9",
     "title": "Hinge Points | Групова изложба, представена от Atelierele Scânteia",
     "artist": "Групова изложба, представена от Atelierele Scânteia",
@@ -307,19 +294,6 @@
     "lastUpdated": "2026-11-02T11:37:29.366Z"
   },
   {
-    "id": "programata--1c6a27011d",
-    "title": "ТОЙ | Йохана Траянова",
-    "artist": "Йохана Траянова",
-    "venue": "Depoo",
-    "exhibitionStart": "2026-10-30",
-    "exhibitionEnd": "2026-11-10",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/toj-johana-trayanova/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/screenshot_2026-10-27_at_19.18.33.png",
-    "lastUpdated": "2026-11-02T11:37:29.366Z"
-  },
-  {
     "id": "programata-scenocosme-automatic-gallery-831d485a32",
     "title": "Scenocosme в Automatic Gallery: когато природата и технологиите влязат в диалог",
     "venue": "Галерия АВТОМАТИК",
@@ -329,19 +303,6 @@
     "source": "programata",
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/scenocosme-v-automatic-gallery-kogato-prirodata-i-tehnologiite-vlyazat-v-dialog/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/20240315_141255-scaled.jpg",
-    "lastUpdated": "2026-11-09T12:00:23.703Z"
-  },
-  {
-    "id": "programata--31cd43ef23",
-    "title": "Извънвремие | Свилена Тенева",
-    "artist": "Свилена Тенева",
-    "venue": "Париж",
-    "exhibitionStart": "2026-11-02",
-    "exhibitionEnd": "2026-11-14",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/izvanvremie-svilena-teneva/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/svilena-teneva-izsledovatel-na-tishinata-24x33cm.jpg",
     "lastUpdated": "2026-11-09T12:00:23.703Z"
   },
   {
@@ -358,17 +319,17 @@
     "lastUpdated": "2026-11-02T11:37:29.366Z"
   },
   {
-    "id": "programata--a7862ab823",
-    "title": "Полет за избрани | Николай Стоев",
-    "artist": "Николай Стоев",
-    "venue": "Арте",
+    "id": "programata--a63a6d2cd1",
+    "title": "Различните | Магда Абазова и Георги Янакиев",
+    "artist": "Магда Абазова и Георги Янакиев",
+    "venue": "Лоранъ",
     "exhibitionStart": "2026-11-03",
-    "exhibitionEnd": "2026-11-14",
+    "exhibitionEnd": "2026-11-28",
     "eventType": "other",
     "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/polet-za-izbrani-nikolaj-stoev/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/stoev.jpg",
-    "lastUpdated": "2026-11-02T11:37:29.366Z"
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/razlichnite-magda-abazova-i-georgi-yanakiev/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/pokana-scaled.jpg",
+    "lastUpdated": "2026-11-16T11:58:00.338Z"
   },
   {
     "id": "programata--370b971ff4",
@@ -382,5 +343,30 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/logika-na-nevazmozhnoto-dinko-angelov/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/mkk_0980.jpg",
     "lastUpdated": "2026-11-09T12:00:23.703Z"
+  },
+  {
+    "id": "programata--9a93d3a893",
+    "title": "Христо Харалампиев в галерия Ракурси",
+    "venue": "Ракурси",
+    "exhibitionStart": "2026-11-10",
+    "exhibitionEnd": "2026-11-28",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/hristo-haralampiev-v-gale/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/9.jpg",
+    "lastUpdated": "2026-11-16T11:58:00.338Z"
+  },
+  {
+    "id": "programata--5df70f9445",
+    "title": "Ехо на отсъствието | Теодора Цанова – Федя",
+    "artist": "Теодора Цанова – Федя",
+    "venue": "DOZA",
+    "exhibitionStart": "2026-11-17",
+    "exhibitionEnd": "2026-11-24",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/eho-na-otsastvieto-teodora-czanova-fedya/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/viziya__eho-na-otsusvieto.pdf.jpg",
+    "lastUpdated": "2026-11-16T11:58:00.338Z"
   }
 ]
