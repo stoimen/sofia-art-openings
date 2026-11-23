@@ -268,19 +268,6 @@
     "lastUpdated": "2026-10-12T11:15:57.862Z"
   },
   {
-    "id": "programata--91a213a25e",
-    "title": "Съприкосновения | Вера Недкова и Кирил Цонев",
-    "artist": "Вера Недкова и Кирил Цонев",
-    "venue": "Къща-музей Вера Недкова",
-    "exhibitionStart": "2026-10-21",
-    "exhibitionEnd": "2026-11-20",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/saprikosnoveniya-vera-nedkova-i-kiril-czonev/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/10/7-scaled.jpg",
-    "lastUpdated": "2026-11-02T11:37:29.366Z"
-  },
-  {
     "id": "programata-1935-2020-6ba7b7e1b8",
     "title": "Между материята и антиматерията | Христо Симеонов [1935-2020]",
     "artist": "Христо Симеонов [1935-2020]",
@@ -332,19 +319,6 @@
     "lastUpdated": "2026-11-16T11:58:00.338Z"
   },
   {
-    "id": "programata--370b971ff4",
-    "title": "Логика на невъзможното | Динко Ангелов",
-    "artist": "Динко Ангелов",
-    "venue": "Аросита",
-    "exhibitionStart": "2026-11-05",
-    "exhibitionEnd": "2026-11-19",
-    "eventType": "other",
-    "source": "programata",
-    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/logika-na-nevazmozhnoto-dinko-angelov/",
-    "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/mkk_0980.jpg",
-    "lastUpdated": "2026-11-09T12:00:23.703Z"
-  },
-  {
     "id": "programata--9a93d3a893",
     "title": "Христо Харалампиев в галерия Ракурси",
     "venue": "Ракурси",
@@ -368,5 +342,31 @@
     "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/eho-na-otsastvieto-teodora-czanova-fedya/",
     "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/viziya__eho-na-otsusvieto.pdf.jpg",
     "lastUpdated": "2026-11-16T11:58:00.338Z"
+  },
+  {
+    "id": "programata--776ead97a3",
+    "title": "Райската градина | Петко Арнаудов",
+    "artist": "Петко Арнаудов",
+    "venue": "Нюанс",
+    "exhibitionStart": "2026-11-19",
+    "exhibitionEnd": "2026-12-13",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/rajskata-gradina-petko-arnaudov/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/pet.png",
+    "lastUpdated": "2026-11-23T13:33:28.533Z"
+  },
+  {
+    "id": "programata--32d4cf0e12",
+    "title": "Любов и още нещо | Кирил Матеев",
+    "artist": "Кирил Матеев",
+    "venue": "Стубел",
+    "exhibitionStart": "2026-11-25",
+    "exhibitionEnd": "2026-12-12",
+    "eventType": "other",
+    "source": "programata",
+    "sourceUrl": "https://programata.bg/izlozhbi/izlozhba/lyubov-i-osthe-nestho-kiril-mateev/",
+    "imageUrl": "https://programata.bg/wp-content/uploads/2026/11/4.jpg",
+    "lastUpdated": "2026-11-23T13:33:28.533Z"
   }
 ]
